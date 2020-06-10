@@ -5,183 +5,183 @@
 	"data": [
 		{
 			"newsId": "1",
-			"newsName": "css3ÓÃtransitionÊµÏÖ±ß¿ò¶¯»­Ğ§¹û",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "css3ÓÃtransitionÊµÏÖ±ß¿ò¶¯»­Ğ§¹ûcss3ÓÃtransitionÊµÏÖ±ß¿ò¶¯»­Ğ§¹û",
+			"newsName": "css3ç”¨transitionå®ç°è¾¹æ¡†åŠ¨ç”»æ•ˆæœ",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "css3ç”¨transitionå®ç°è¾¹æ¡†åŠ¨ç”»æ•ˆæœcss3ç”¨transitionå®ç°è¾¹æ¡†åŠ¨ç”»æ•ˆæœ",
 			"newsStatus": "0",
 			"newsImg":"../../images/userface1.jpg",
-			"newsLook": "¿ª·Åä¯ÀÀ",
+			"newsLook": "å¼€æ”¾æµè§ˆ",
 			"newsTop": "",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "css3ÓÃtransitionÊµÏÖ±ß¿ò¶¯»­Ğ§¹û<img src='../../images/userface1.jpg' alt='ÎÄÕÂÄÚÈİÍ¼Æ¬'>css3ÓÃtransitionÊµÏÖ±ß¿ò¶¯»­Ğ§¹ûcss3ÓÃtransitionÊµÏÖ±ß¿ò¶¯»­Ğ§¹û"
+			"content" : "css3ç”¨transitionå®ç°è¾¹æ¡†åŠ¨ç”»æ•ˆæœ<img src='../../images/userface1.jpg' alt='æ–‡ç« å†…å®¹å›¾ç‰‡'>css3ç”¨transitionå®ç°è¾¹æ¡†åŠ¨ç”»æ•ˆæœcss3ç”¨transitionå®ç°è¾¹æ¡†åŠ¨ç”»æ•ˆæœ"
 		},
 		{
 			"newsId": "2",
-			"newsName": "×Ô¶¨ÒåµÄÄ£¿éÃû³Æ¿ÉÒÔ°üº¬/Âğ",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "×Ô¶¨ÒåµÄÄ£¿éÃû³Æ¿ÉÒÔ°üº¬/Âğ×Ô¶¨ÒåµÄÄ£¿éÃû³Æ¿ÉÒÔ°üº¬/Âğ",
+			"newsName": "è‡ªå®šä¹‰çš„æ¨¡å—åç§°å¯ä»¥åŒ…å«/å—",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "è‡ªå®šä¹‰çš„æ¨¡å—åç§°å¯ä»¥åŒ…å«/å—è‡ªå®šä¹‰çš„æ¨¡å—åç§°å¯ä»¥åŒ…å«/å—",
 			"newsStatus": "1",
 			"newsImg":"../../images/userface2.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "×Ô¶¨ÒåµÄÄ£¿éÃû³Æ¿ÉÒÔ°üº¬×Ô¶¨ÒåµÄÄ£¿éÃû³Æ¿É<img src='../../images/userface2.jpg' alt='ÎÄÕÂÄÚÈİÍ¼Æ¬'>ÒÔ°üº¬×Ô¶¨ÒåµÄÄ£¿éÃû³Æ¿ÉÒÔ°üº¬×Ô¶¨ÒåµÄÄ£¿éÃû³Æ¿ÉÒÔ°üº¬"
+			"content" : "è‡ªå®šä¹‰çš„æ¨¡å—åç§°å¯ä»¥åŒ…å«è‡ªå®šä¹‰çš„æ¨¡å—åç§°å¯<img src='../../images/userface2.jpg' alt='æ–‡ç« å†…å®¹å›¾ç‰‡'>ä»¥åŒ…å«è‡ªå®šä¹‰çš„æ¨¡å—åç§°å¯ä»¥åŒ…å«è‡ªå®šä¹‰çš„æ¨¡å—åç§°å¯ä»¥åŒ…å«"
 		},
 		{
 			"newsId": "3",
-			"newsName": "layui.treeÈçºÎajax¼ÓÔØ¶ş¼¶²Ëµ¥",
+			"newsName": "layui.treeå¦‚ä½•ajaxåŠ è½½äºŒçº§èœå•",
 			"newsAuthor": "admin",
-			"abstract": "layui.treeÈçºÎajax¼ÓÔØ¶ş¼¶²Ëµ¥layui.treeÈçºÎajax¼ÓÔØ¶ş¼¶²Ëµ¥",
+			"abstract": "layui.treeå¦‚ä½•ajaxåŠ è½½äºŒçº§èœå•layui.treeå¦‚ä½•ajaxåŠ è½½äºŒçº§èœå•",
 			"newsStatus": "2",
 			"newsImg":"../../images/userface3.jpg",
-			"newsLook": "¿ª·Åä¯ÀÀ",
+			"newsLook": "å¼€æ”¾æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "layui.treeÈçºÎajax¼ÓÔØ¶ş¼¶²Ëµ¥layui.treeÈçºÎ<img src='../../images/userface3.jpg' alt='ÎÄÕÂÄÚÈİÍ¼Æ¬'>ajax¼ÓÔØ¶ş¼¶²Ëµ¥layui.treeÈçºÎajax¼ÓÔØ¶ş¼¶²Ëµ¥"
+			"content" : "layui.treeå¦‚ä½•ajaxåŠ è½½äºŒçº§èœå•layui.treeå¦‚ä½•<img src='../../images/userface3.jpg' alt='æ–‡ç« å†…å®¹å›¾ç‰‡'>ajaxåŠ è½½äºŒçº§èœå•layui.treeå¦‚ä½•ajaxåŠ è½½äºŒçº§èœå•"
 		},
 		{
 			"newsId": "4",
-			"newsName": "layui.uploadÈçºÎ´ø²ÎÊı£¿ÏñjqµÄdata:{}ÄÇÑù",
+			"newsName": "layui.uploadå¦‚ä½•å¸¦å‚æ•°ï¼Ÿåƒjqçš„data:{}é‚£æ ·",
 			"newsAuthor": "admin",
-			"abstract": "layui.uploadÈçºÎ´ø²ÎÊı£¿ÏñjqµÄdata:{}ÄÇÑùlayui.uploadÈçºÎ´ø²ÎÊı£¿ÏñjqµÄdata:{}ÄÇÑù",
+			"abstract": "layui.uploadå¦‚ä½•å¸¦å‚æ•°ï¼Ÿåƒjqçš„data:{}é‚£æ ·layui.uploadå¦‚ä½•å¸¦å‚æ•°ï¼Ÿåƒjqçš„data:{}é‚£æ ·",
 			"newsStatus": "0",
 			"newsImg":"../../images/userface4.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "layui.uploadÈçºÎ´ø²ÎÊı£¿ÏñjqµÄdata:{}ÄÇÑùlayui.uploadÈçºÎ´ø²ÎÊı£¿ÏñjqµÄdata:{}ÄÇÑùlayui.uploadÈçºÎ´ø²ÎÊı£¿ÏñjqµÄdata:{}ÄÇÑù"
+			"content" : "layui.uploadå¦‚ä½•å¸¦å‚æ•°ï¼Ÿåƒjqçš„data:{}é‚£æ ·layui.uploadå¦‚ä½•å¸¦å‚æ•°ï¼Ÿåƒjqçš„data:{}é‚£æ ·layui.uploadå¦‚ä½•å¸¦å‚æ•°ï¼Ÿåƒjqçš„data:{}é‚£æ ·"
 		},
 		{
 			"newsId": "5",
-			"newsName": "±íµ¥ÔªËØ³¤¶ÈÓ¦¸ÃÔõÃ´µ÷Õû²ÅÃÀ¹Û",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "±íµ¥ÔªËØ³¤¶ÈÓ¦¸ÃÔõÃ´µ÷Õû²ÅÃÀ¹Û±íµ¥ÔªËØ³¤¶ÈÓ¦¸ÃÔõÃ´µ÷Õû²ÅÃÀ¹Û",
+			"newsName": "è¡¨å•å…ƒç´ é•¿åº¦åº”è¯¥æ€ä¹ˆè°ƒæ•´æ‰ç¾è§‚",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "è¡¨å•å…ƒç´ é•¿åº¦åº”è¯¥æ€ä¹ˆè°ƒæ•´æ‰ç¾è§‚è¡¨å•å…ƒç´ é•¿åº¦åº”è¯¥æ€ä¹ˆè°ƒæ•´æ‰ç¾è§‚",
 			"newsStatus": "1",
 			"newsImg":"../../images/userface5.jpg",
-			"newsLook": "¿ª·Åä¯ÀÀ",
+			"newsLook": "å¼€æ”¾æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "±íµ¥ÔªËØ³¤¶ÈÓ¦¸ÃÔõÃ´µ÷Õû²ÅÃÀ¹Û±íµ¥ÔªËØ³¤¶ÈÓ¦¸ÃÔõÃ´µ÷Õû²ÅÃÀ¹Û±íµ¥ÔªËØ³¤¶ÈÓ¦¸ÃÔõÃ´µ÷Õû²ÅÃÀ¹Û±íµ¥ÔªËØ³¤¶ÈÓ¦¸ÃÔõÃ´µ÷Õû²ÅÃÀ¹Û"
+			"content" : "è¡¨å•å…ƒç´ é•¿åº¦åº”è¯¥æ€ä¹ˆè°ƒæ•´æ‰ç¾è§‚è¡¨å•å…ƒç´ é•¿åº¦åº”è¯¥æ€ä¹ˆè°ƒæ•´æ‰ç¾è§‚è¡¨å•å…ƒç´ é•¿åº¦åº”è¯¥æ€ä¹ˆè°ƒæ•´æ‰ç¾è§‚è¡¨å•å…ƒç´ é•¿åº¦åº”è¯¥æ€ä¹ˆè°ƒæ•´æ‰ç¾è§‚"
 		},
 		{
 			"newsId": "6",
-			"newsName": "layui ÀûÓÃajax³å»ñÈ¡µ½json Êı¾İºó ÔõÑù½øĞĞäÖÈ¾",
+			"newsName": "layui åˆ©ç”¨ajaxå†²è·å–åˆ°json æ•°æ®å æ€æ ·è¿›è¡Œæ¸²æŸ“",
 			"newsAuthor": "admin",
-			"abstract": "layui ÀûÓÃajax³å»ñÈ¡µ½json Êı¾İºó ÔõÑù½øĞĞäÖÈ¾layui ÀûÓÃajax³å»ñÈ¡µ½json Êı¾İºó ÔõÑù½øĞĞäÖÈ¾",
+			"abstract": "layui åˆ©ç”¨ajaxå†²è·å–åˆ°json æ•°æ®å æ€æ ·è¿›è¡Œæ¸²æŸ“layui åˆ©ç”¨ajaxå†²è·å–åˆ°json æ•°æ®å æ€æ ·è¿›è¡Œæ¸²æŸ“",
 			"newsStatus": "0",
 			"newsImg":"../../images/userface1.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "layui ÀûÓÃajax³å»ñÈ¡µ½json Êı¾İºó ÔõÑù½øĞĞäÖÈ¾layui ÀûÓÃajax³å»ñÈ¡µ½json Êı¾İºó ÔõÑù½øĞĞäÖÈ¾layui ÀûÓÃajax³å»ñÈ¡µ½json Êı¾İºó ÔõÑù½øĞĞäÖÈ¾"
+			"content" : "layui åˆ©ç”¨ajaxå†²è·å–åˆ°json æ•°æ®å æ€æ ·è¿›è¡Œæ¸²æŸ“layui åˆ©ç”¨ajaxå†²è·å–åˆ°json æ•°æ®å æ€æ ·è¿›è¡Œæ¸²æŸ“layui åˆ©ç”¨ajaxå†²è·å–åˆ°json æ•°æ®å æ€æ ·è¿›è¡Œæ¸²æŸ“"
 		},
 		{
 			"newsId": "7",
-			"newsName": "Î¢ĞÅÒ³ÃæÖĞ¸»ÎÄ±¾±à¼­Æ÷LayEditÎŞ·¨Ê¹ÓÃ",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "Î¢ĞÅÒ³ÃæÖĞ¸»ÎÄ±¾±à¼­Æ÷LayEditÎŞ·¨Ê¹ÓÃÎ¢ĞÅÒ³ÃæÖĞ¸»ÎÄ±¾±à¼­Æ÷LayEditÎŞ·¨Ê¹ÓÃ",
+			"newsName": "å¾®ä¿¡é¡µé¢ä¸­å¯Œæ–‡æœ¬ç¼–è¾‘å™¨LayEditæ— æ³•ä½¿ç”¨",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "å¾®ä¿¡é¡µé¢ä¸­å¯Œæ–‡æœ¬ç¼–è¾‘å™¨LayEditæ— æ³•ä½¿ç”¨å¾®ä¿¡é¡µé¢ä¸­å¯Œæ–‡æœ¬ç¼–è¾‘å™¨LayEditæ— æ³•ä½¿ç”¨",
 			"newsStatus": "1",
 			"newsImg":"../../images/userface2.jpg",
-			"newsLook": "¿ª·Åä¯ÀÀ",
+			"newsLook": "å¼€æ”¾æµè§ˆ",
 			"newsTop": "",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "Î¢ĞÅÒ³ÃæÖĞ¸»ÎÄ±¾±à¼­Æ÷LayEditÎŞ·¨Ê¹ÓÃÎ¢ĞÅÒ³ÃæÖĞ¸»ÎÄ±¾±à¼­Æ÷LayEditÎŞ·¨Ê¹ÓÃÎ¢ĞÅÒ³ÃæÖĞ¸»ÎÄ±¾±à¼­Æ÷LayEditÎŞ·¨Ê¹ÓÃ"
+			"content" : "å¾®ä¿¡é¡µé¢ä¸­å¯Œæ–‡æœ¬ç¼–è¾‘å™¨LayEditæ— æ³•ä½¿ç”¨å¾®ä¿¡é¡µé¢ä¸­å¯Œæ–‡æœ¬ç¼–è¾‘å™¨LayEditæ— æ³•ä½¿ç”¨å¾®ä¿¡é¡µé¢ä¸­å¯Œæ–‡æœ¬ç¼–è¾‘å™¨LayEditæ— æ³•ä½¿ç”¨"
 		},
 		{
 			"newsId": "8",
-			"newsName": "layui Ê²Ã´Ê±ºò·¢²¼ĞÂµÄ°æ±¾Ñ½",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "layui Ê²Ã´Ê±ºò·¢²¼ĞÂµÄ°æ±¾Ñ½layui Ê²Ã´Ê±ºò·¢²¼ĞÂµÄ°æ±¾Ñ½",
+			"newsName": "layui ä»€ä¹ˆæ—¶å€™å‘å¸ƒæ–°çš„ç‰ˆæœ¬å‘€",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "layui ä»€ä¹ˆæ—¶å€™å‘å¸ƒæ–°çš„ç‰ˆæœ¬å‘€layui ä»€ä¹ˆæ—¶å€™å‘å¸ƒæ–°çš„ç‰ˆæœ¬å‘€",
 			"newsStatus": "2",
 			"newsImg":"../../images/userface3.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "layui Ê²Ã´Ê±ºò·¢²¼ĞÂµÄ°æ±¾Ñ½layui Ê²Ã´Ê±ºò·¢²¼ĞÂµÄ°æ±¾Ñ½layui Ê²Ã´Ê±ºò·¢²¼ĞÂµÄ°æ±¾Ñ½layui Ê²Ã´Ê±ºò·¢²¼ĞÂµÄ°æ±¾Ñ½"
+			"content" : "layui ä»€ä¹ˆæ—¶å€™å‘å¸ƒæ–°çš„ç‰ˆæœ¬å‘€layui ä»€ä¹ˆæ—¶å€™å‘å¸ƒæ–°çš„ç‰ˆæœ¬å‘€layui ä»€ä¹ˆæ—¶å€™å‘å¸ƒæ–°çš„ç‰ˆæœ¬å‘€layui ä»€ä¹ˆæ—¶å€™å‘å¸ƒæ–°çš„ç‰ˆæœ¬å‘€"
 		},
 		{
 			"newsId": "9",
-			"newsName": "layuiÉÏ´«×é¼ş²»Ö§³ÖÉÏ´«Ç°µÄÍ¼Æ¬Ô¤ÀÀÂï£¿",
+			"newsName": "layuiä¸Šä¼ ç»„ä»¶ä¸æ”¯æŒä¸Šä¼ å‰çš„å›¾ç‰‡é¢„è§ˆå˜›ï¼Ÿ",
 			"newsAuthor": "admin",
-			"abstract": "layuiÉÏ´«×é¼ş²»Ö§³ÖÉÏ´«Ç°µÄÍ¼Æ¬Ô¤ÀÀÂï£¿layuiÉÏ´«×é¼ş²»Ö§³ÖÉÏ´«Ç°µÄÍ¼Æ¬Ô¤ÀÀÂï£¿",
+			"abstract": "layuiä¸Šä¼ ç»„ä»¶ä¸æ”¯æŒä¸Šä¼ å‰çš„å›¾ç‰‡é¢„è§ˆå˜›ï¼Ÿlayuiä¸Šä¼ ç»„ä»¶ä¸æ”¯æŒä¸Šä¼ å‰çš„å›¾ç‰‡é¢„è§ˆå˜›ï¼Ÿ",
 			"newsStatus": "2",
 			"newsImg":"../../images/userface4.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "layuiÉÏ´«×é¼ş²»Ö§³ÖÉÏ´«Ç°µÄÍ¼Æ¬Ô¤ÀÀÂï£¿layuiÉÏ´«×é¼ş²»Ö§³ÖÉÏ´«Ç°µÄÍ¼Æ¬Ô¤ÀÀÂï£¿layuiÉÏ´«×é¼ş²»Ö§³ÖÉÏ´«Ç°µÄÍ¼Æ¬Ô¤ÀÀÂï£¿"
+			"content" : "layuiä¸Šä¼ ç»„ä»¶ä¸æ”¯æŒä¸Šä¼ å‰çš„å›¾ç‰‡é¢„è§ˆå˜›ï¼Ÿlayuiä¸Šä¼ ç»„ä»¶ä¸æ”¯æŒä¸Šä¼ å‰çš„å›¾ç‰‡é¢„è§ˆå˜›ï¼Ÿlayuiä¸Šä¼ ç»„ä»¶ä¸æ”¯æŒä¸Šä¼ å‰çš„å›¾ç‰‡é¢„è§ˆå˜›ï¼Ÿ"
 		},
 		{
 			"newsId": "10",
-			"newsName": "¹ØÓÚlayer.confirmµã»÷ÎŞ·¨¹Ø±ÕµÄÒÉ»ó",
+			"newsName": "å…³äºlayer.confirmç‚¹å‡»æ— æ³•å…³é—­çš„ç–‘æƒ‘",
 			"newsAuthor": "admin",
-			"abstract": "¹ØÓÚlayer.confirmµã»÷ÎŞ·¨¹Ø±ÕµÄÒÉ»ó¹ØÓÚlayer.confirmµã»÷ÎŞ·¨¹Ø±ÕµÄÒÉ»ó",
+			"abstract": "å…³äºlayer.confirmç‚¹å‡»æ— æ³•å…³é—­çš„ç–‘æƒ‘å…³äºlayer.confirmç‚¹å‡»æ— æ³•å…³é—­çš„ç–‘æƒ‘",
 			"newsStatus": "1",
 			"newsImg":"../../images/userface5.jpg",
-			"newsLook": "¿ª·Åä¯ÀÀ",
+			"newsLook": "å¼€æ”¾æµè§ˆ",
 			"newsTop": "",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "¹ØÓÚlayer.confirmµã»÷ÎŞ·¨¹Ø±ÕµÄÒÉ»ó¹ØÓÚlayer.confirmµã»÷ÎŞ·¨¹Ø±ÕµÄÒÉ»ó¹ØÓÚlayer.confirmµã»÷ÎŞ·¨¹Ø±ÕµÄÒÉ»ó"
+			"content" : "å…³äºlayer.confirmç‚¹å‡»æ— æ³•å…³é—­çš„ç–‘æƒ‘å…³äºlayer.confirmç‚¹å‡»æ— æ³•å…³é—­çš„ç–‘æƒ‘å…³äºlayer.confirmç‚¹å‡»æ— æ³•å…³é—­çš„ç–‘æƒ‘"
 		},
 		{
 			"newsId": "11",
-			"newsName": "layui form±íµ¥Ìá½»³É¹¦ÈçºÎÄÃÈ¡·µ»ØÖµ",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "layui form±íµ¥Ìá½»³É¹¦ÈçºÎÄÃÈ¡·µ»ØÖµlayui form±íµ¥Ìá½»³É¹¦ÈçºÎÄÃÈ¡·µ»ØÖµ",
+			"newsName": "layui formè¡¨å•æäº¤æˆåŠŸå¦‚ä½•æ‹¿å–è¿”å›å€¼",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "layui formè¡¨å•æäº¤æˆåŠŸå¦‚ä½•æ‹¿å–è¿”å›å€¼layui formè¡¨å•æäº¤æˆåŠŸå¦‚ä½•æ‹¿å–è¿”å›å€¼",
 			"newsStatus": "2",
 			"newsImg":"../../images/userface1.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "layui form±íµ¥Ìá½»³É¹¦ÈçºÎÄÃÈ¡·µ»ØÖµlayui form±íµ¥Ìá½»³É¹¦ÈçºÎÄÃÈ¡·µ»ØÖµlayui form±íµ¥Ìá½»³É¹¦ÈçºÎÄÃÈ¡·µ»ØÖµ"
+			"content" : "layui formè¡¨å•æäº¤æˆåŠŸå¦‚ä½•æ‹¿å–è¿”å›å€¼layui formè¡¨å•æäº¤æˆåŠŸå¦‚ä½•æ‹¿å–è¿”å›å€¼layui formè¡¨å•æäº¤æˆåŠŸå¦‚ä½•æ‹¿å–è¿”å›å€¼"
 		},
 		{
 			"newsId": "12",
-			"newsName": "layer mobileV2.0 yes»Øµ÷º¯ÊıÎŞ·¨ÓÃ£¿",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "layer mobileV2.0 yes»Øµ÷º¯ÊıÎŞ·¨ÓÃ£¿layer mobileV2.0 yes»Øµ÷º¯ÊıÎŞ·¨ÓÃ£¿",
+			"newsName": "layer mobileV2.0 yeså›è°ƒå‡½æ•°æ— æ³•ç”¨ï¼Ÿ",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "layer mobileV2.0 yeså›è°ƒå‡½æ•°æ— æ³•ç”¨ï¼Ÿlayer mobileV2.0 yeså›è°ƒå‡½æ•°æ— æ³•ç”¨ï¼Ÿ",
 			"newsStatus": "1",
 			"newsImg":"../../images/userface2.jpg",
-			"newsLook": "¿ª·Åä¯ÀÀ",
+			"newsLook": "å¼€æ”¾æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "layer mobileV2.0 yes»Øµ÷º¯ÊıÎŞ·¨ÓÃlayer mobileV2.0 yes»Øµ÷º¯ÊıÎŞ·¨ÓÃlayer mobileV2.0 yes»Øµ÷º¯ÊıÎŞ·¨ÓÃ"
+			"content" : "layer mobileV2.0 yeså›è°ƒå‡½æ•°æ— æ³•ç”¨layer mobileV2.0 yeså›è°ƒå‡½æ•°æ— æ³•ç”¨layer mobileV2.0 yeså›è°ƒå‡½æ•°æ— æ³•ç”¨"
 		},
 		{
 			"newsId": "13",
-			"newsName": "¹ØÓÚlayerÖĞ×Ô´øµÄbtn»Øµ÷µ¯²ãÒ³ÃæµÄÄÚÈİ",
+			"newsName": "å…³äºlayerä¸­è‡ªå¸¦çš„btnå›è°ƒå¼¹å±‚é¡µé¢çš„å†…å®¹",
 			"newsAuthor": "admin",
-			"abstract": "¹ØÓÚlayerÖĞ×Ô´øµÄbtn»Øµ÷µ¯²ãÒ³ÃæµÄÄÚÈİ¹ØÓÚlayerÖĞ×Ô´øµÄbtn»Øµ÷µ¯²ãÒ³ÃæµÄÄÚÈİ",
+			"abstract": "å…³äºlayerä¸­è‡ªå¸¦çš„btnå›è°ƒå¼¹å±‚é¡µé¢çš„å†…å®¹å…³äºlayerä¸­è‡ªå¸¦çš„btnå›è°ƒå¼¹å±‚é¡µé¢çš„å†…å®¹",
 			"newsStatus": "1",
 			"newsImg":"../../images/userface3.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "¹ØÓÚlayerÖĞ×Ô´øµÄbtn»Øµ÷µ¯²ãÒ³ÃæµÄÄÚÈİ¹ØÓÚlayerÖĞ×Ô´øµÄbtn»Øµ÷µ¯²ãÒ³ÃæµÄÄÚÈİ¹ØÓÚlayerÖĞ×Ô´øµÄbtn»Øµ÷µ¯²ãÒ³ÃæµÄÄÚÈİ"
+			"content" : "å…³äºlayerä¸­è‡ªå¸¦çš„btnå›è°ƒå¼¹å±‚é¡µé¢çš„å†…å®¹å…³äºlayerä¸­è‡ªå¸¦çš„btnå›è°ƒå¼¹å±‚é¡µé¢çš„å†…å®¹å…³äºlayerä¸­è‡ªå¸¦çš„btnå›è°ƒå¼¹å±‚é¡µé¢çš„å†…å®¹"
 		},
 		{
 			"newsId": "14",
-			"newsName": "±»±à¼­Æ÷ layedit Í¼Æ¬ÉÏ´«¸ã±ÀÀ£ÁË",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "±»±à¼­Æ÷ layedit Í¼Æ¬ÉÏ´«¸ã±ÀÀ£ÁË±»±à¼­Æ÷ layedit Í¼Æ¬ÉÏ´«¸ã±ÀÀ£ÁË",
+			"newsName": "è¢«ç¼–è¾‘å™¨ layedit å›¾ç‰‡ä¸Šä¼ æå´©æºƒäº†",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "è¢«ç¼–è¾‘å™¨ layedit å›¾ç‰‡ä¸Šä¼ æå´©æºƒäº†è¢«ç¼–è¾‘å™¨ layedit å›¾ç‰‡ä¸Šä¼ æå´©æºƒäº†",
 			"newsStatus": "0",
 			"newsImg":"../../images/userface4.jpg",
-			"newsLook": "Ë½ÃÜä¯ÀÀ",
+			"newsLook": "ç§å¯†æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "±»±à¼­Æ÷ layedit Í¼Æ¬ÉÏ´«¸ã±ÀÀ£ÁË±»±à¼­Æ÷ layedit Í¼Æ¬ÉÏ´«¸ã±ÀÀ£ÁË±»±à¼­Æ÷ layedit Í¼Æ¬ÉÏ´«¸ã±ÀÀ£ÁË"
+			"content" : "è¢«ç¼–è¾‘å™¨ layedit å›¾ç‰‡ä¸Šä¼ æå´©æºƒäº†è¢«ç¼–è¾‘å™¨ layedit å›¾ç‰‡ä¸Šä¼ æå´©æºƒäº†è¢«ç¼–è¾‘å™¨ layedit å›¾ç‰‡ä¸Šä¼ æå´©æºƒäº†"
 		},
 		{
 			"newsId": "15",
-			"newsName": "element.tabChange()·½·¨ÔËĞĞÁË£¬µ«ÊÇÒ³Ãæ²¢Ã»ÓĞ²úÉúĞ§¹û",
-			"newsAuthor": "ò‘ò‘ıîo",
-			"abstract": "element.tabChange()·½·¨ÔËĞĞÁË£¬µ«ÊÇÒ³Ãæ²¢Ã»ÓĞ²úÉúĞ§¹ûelement.tabChange()·½·¨ÔËĞĞÁË£¬µ«ÊÇÒ³Ãæ²¢Ã»ÓĞ²úÉúĞ§¹û",
+			"newsName": "element.tabChange()æ–¹æ³•è¿è¡Œäº†ï¼Œä½†æ˜¯é¡µé¢å¹¶æ²¡æœ‰äº§ç”Ÿæ•ˆæœ",
+			"newsAuthor": "é©Šé©Šé¾”é ¾",
+			"abstract": "element.tabChange()æ–¹æ³•è¿è¡Œäº†ï¼Œä½†æ˜¯é¡µé¢å¹¶æ²¡æœ‰äº§ç”Ÿæ•ˆæœelement.tabChange()æ–¹æ³•è¿è¡Œäº†ï¼Œä½†æ˜¯é¡µé¢å¹¶æ²¡æœ‰äº§ç”Ÿæ•ˆæœ",
 			"newsStatus": "2",
 			"newsImg":"../../images/userface5.jpg",
-			"newsLook": "¿ª·Åä¯ÀÀ",
+			"newsLook": "å¼€æ”¾æµè§ˆ",
 			"newsTop": "checked",
 			"newsTime": "2017-04-14 00:00:00",
-			"content" : "element.tabChange()·½·¨ÔËĞĞÁË£¬µ«ÊÇÒ³Ãæ²¢Ã»ÓĞ²úÉúĞ§¹ûelement.tabChange()·½·¨ÔËĞĞÁË£¬µ«ÊÇÒ³Ãæ²¢Ã»ÓĞ²úÉúĞ§¹û"
+			"content" : "element.tabChange()æ–¹æ³•è¿è¡Œäº†ï¼Œä½†æ˜¯é¡µé¢å¹¶æ²¡æœ‰äº§ç”Ÿæ•ˆæœelement.tabChange()æ–¹æ³•è¿è¡Œäº†ï¼Œä½†æ˜¯é¡µé¢å¹¶æ²¡æœ‰äº§ç”Ÿæ•ˆæœ"
 		}
 	]
 }

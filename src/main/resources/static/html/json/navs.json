@@ -1,4 +1,30 @@
 {
+	"personnelManagement": [
+		{
+			"title": "新增人员",
+			"icon": "&#xe654;",
+			"href": "page/user/addUser.html",
+			"spread": false
+		},
+		{
+			"title": "生簿",
+			"icon": "&#xe6af;",
+			"href": "",
+			"spread": false
+		},
+		{
+			"title": "死簿",
+			"icon": "&#xe69c;",
+			"href": "",
+			"spread": false
+		},
+		{
+			"title": "查询所有人员",
+			"icon": "&#xe613;",
+			"href": "page/user/allUser.html",
+			"spread": false
+		}
+	],
 	"contentManagement": [
 		{
 			"title": "文章列表",

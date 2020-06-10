@@ -6,7 +6,7 @@
     {
       "id": 1,
       "gradeIcon": "icon-vip1",
-      "gradeName": "¾óÇ¿ÇàÍ­",
+      "gradeName": "å€”å¼ºé’é“œ",
       "gradePoint": "0",
       "gradeGold": "0",
       "gradeValue": "0"
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "gradeIcon": "icon-vip2",
-      "gradeName": "ÖÈĞò°×Òø",
+      "gradeName": "ç§©åºç™½é“¶",
       "gradePoint": "100",
       "gradeGold": "200",
       "gradeValue": "500"
@@ -22,7 +22,7 @@
     {
       "id": 3,
       "gradeIcon": "icon-vip3",
-      "gradeName": "ÈÙÒ«»Æ½ğ",
+      "gradeName": "è£è€€é»„é‡‘",
       "gradePoint": "300",
       "gradeGold": "300",
       "gradeValue": "1000"
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "gradeIcon": "icon-vip4",
-      "gradeName": "×ğ¹ó²¬½ğ",
+      "gradeName": "å°Šè´µé“‚é‡‘",
       "gradePoint": "800",
       "gradeGold": "400",
       "gradeValue": "2000"
@@ -38,7 +38,7 @@
     {
       "id": 5,
       "gradeIcon": "icon-vip5",
-      "gradeName": "ÓÀºã×êÊ¯",
+      "gradeName": "æ°¸æ’é’»çŸ³",
       "gradePoint": "1500",
       "gradeGold": "500",
       "gradeValue": "5000"
@@ -46,7 +46,7 @@
     {
       "id": 6,
       "gradeIcon": "icon-vip6",
-      "gradeName": "ÖÁ×ğĞÇÒ«",
+      "gradeName": "è‡³å°Šæ˜Ÿè€€",
       "gradePoint": "3000",
       "gradeGold": "600",
       "gradeValue": "10000"
@@ -54,7 +54,7 @@
     {
       "id": 7,
       "gradeIcon": "icon-vip7",
-      "gradeName": "×îÇ¿ÍõÕß",
+      "gradeName": "æœ€å¼ºç‹è€…",
       "gradePoint": "5000",
       "gradeGold": "700",
       "gradeValue": "35000"

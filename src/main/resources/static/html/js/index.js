@@ -30,10 +30,15 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
 				//重新渲染左侧菜单
 				tab.render();
 			}else if(json == "seraphApi"){
-                dataStr = data.seraphApi;
-                //重新渲染左侧菜单
-                tab.render();
-            }
+				dataStr = data.seraphApi;
+				//重新渲染左侧菜单
+				tab.render();
+			}
+			else if(json == "personnelManagement"){
+				dataStr = data.personnelManagement;
+				//重新渲染左侧菜单
+				tab.render();
+			}
 		})
 	}
 	//页面加载时判断左侧菜单是否显示
