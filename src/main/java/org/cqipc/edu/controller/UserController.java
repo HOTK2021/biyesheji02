@@ -86,11 +86,23 @@ public class UserController {
 	@RequestMapping("/addUser")
 	@ResponseBody
 	public int addUser(T_user atu){
-		atu.setCreate_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+		System.out.println("进入添加");
+		atu.setPassword(MD5.getMd5(atu.getPassword()));
+		atu.setAvatar("sssss");
+		atu.setStatus(0);
+//		atu.setCreate_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 		atu.setModify_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 		atu.setLast_login_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+		System.out.println(atu);
 		String date=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-		T_user cs=new T_user("xiaogui",MD5.getMd5("123456"), BigInteger.valueOf(5),"111@qq.com","145623987",1,date,date,date,"男","大鬼好惹，小鬼难缠","jZUIxmJycoymBprLOUbT.png",120);
-		return ts.addUser(cs);
+//		T_user cs=new T_user("xiaogui",MD5.getMd5("123456"), BigInteger.valueOf(5),"111@qq.com","145623987",1,date,date,date,"男","大鬼好惹，小鬼难缠","jZUIxmJycoymBprLOUbT.png",120);
+		if(ts.addUser(atu)==1){
+			System.out.println("成功");
+			return 1;
+		}else {
+			System.out.println("失败");
+			return 0;
+		}
+
 	}
 }

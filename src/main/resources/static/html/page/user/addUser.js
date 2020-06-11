@@ -7,6 +7,15 @@ layui.config({
 layui.use(['form','layer','upload','laydate',"address"],function(){
     form = layui.form;
     $ = layui.jquery;
+    $(function () {
+        alert("!!!!!!");
+        addLifeTime();
+    });
+    function addLifeTime() {
+        for(var i=0;i<=130;i++){
+            $("#lifetime").append("<option value='"+i+"'>"+i+"</option>");
+        }
+    };
     var layer = parent.layer === undefined ? layui.layer : top.layer,
         upload = layui.upload,
         laydate = layui.laydate,
@@ -27,15 +36,15 @@ layui.use(['form','layer','upload','laydate',"address"],function(){
     //添加验证规则
     form.verify({
         userBirthday : function(value){
-            if(!/^(\d{4})[\u4e00-\u9fa5]|[-\/](\d{1}|0\d{1}|1[0-2])([\u4e00-\u9fa5]|[-\/](\d{1}|0\d{1}|[1-2][0-9]|3[0-1]))*$/.test(value)){
-                return "出生日期格式不正确！";
-            }
+            // if(!/^(\d{4})[\u4e00-\u9fa5]|[-\/](\d{1}|0\d{1}|1[0-2])([\u4e00-\u9fa5]|[-\/](\d{1}|0\d{1}|[1-2][0-9]|3[0-1]))*$/.test(value)){
+            //     return "出生日期格式不正确！";
+            // }
         }
     })
     //选择出生日期
     laydate.render({
         elem: '.userBirthday',
-        format: 'yyyy年MM月dd日',
+        format: 'yyyy:MM:dd HH:mm:ss',
         trigger: 'click',
         max : 0,
         mark : {"0-12-15":"生日"},
@@ -50,16 +59,24 @@ layui.use(['form','layer','upload','laydate',"address"],function(){
     address.provinces();
 
     //提交个人资料
-    form.on("submit(addUser)",function(data){
-        layer.closeAll();
+    form.on("submit(addUser)",function(){
+        // var index = layer.msg('提交中，请稍候',{icon: 16,time:false,shade:0.8});
+        //将填写的用户信息存到session以便下次调取
         $.ajax({
             type:"post",
             dataType:"json",
-            url: "",
-            data:$("").serialize(),
+            data:$("#addUser").serialize(),
+            url: "/addUser",
             success:function (data) {
-
+                if (data==1){
+                    layer.msg("添加成功！");
+                }else{
+                    layer.msg("添加失败！");
+                }
             }
-    })
-})
+        });
+        return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+    });
 
+   form.render("select");
+});
