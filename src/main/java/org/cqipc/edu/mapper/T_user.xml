@@ -3,13 +3,51 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.cqipc.edu.dao.T_userDao">
+<!--  用户登陆判断	-->
 	<select id="userLogin" resultType="org.cqipc.edu.bean.T_user">
 		select * from t_user where username=#{username} and password=#{password}
 	</select>
+<!--  查询所有在生簿中的用户	-->
 	<select id="selectUserAll" resultType="org.cqipc.edu.bean.T_user">
 		select * from t_user
+		<if test="keyWord!='' and keyWord!=null">
+			<where>
+				username like concat('%',#{keyWord},'%')
+			</where>
+		</if>
+		<if test="user_id!=0">
+			<where>
+				user_id=#{user_id}
+			</where>
+		</if>
+		limit #{pageCount},#{pageSize}
+	</select>
+<!--  查询所有在生簿中的用户的条数  -->
+	<select id="selectUserCount" resultType="int">
+		select count(*) from t_user
+	</select>
+<!-- 查询所有在死簿中的用户 -->
+	<select id="selectUserDieAll" resultType="org.cqipc.edu.bean.T_user">
+		select * from t_user_s limit #{pageCount},#{pageSize}
+	</select>
+<!--  查询所有在死簿中的用户条数	-->
+	<select id="selectUserDieCount" resultType="int">
+		select count(*) from t_user_s
 	</select>
 	<insert id="addUser">
+		<selectKey keyProperty="user_id" order="AFTER" resultType="java.math.BigInteger">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
 		insert into t_user values (null,#{username},#{password},#{dept_id},#{email},#{mobile},#{status},#{create_time},#{modify_time},#{last_login_time},#{ssex},#{description},#{avatar},#{age})
 	</insert>
+	<update id="modifyUserInfo">
+		update t_user set username=#{username},description=#{description},age=#{age} where user_id=#{user_id}
+	</update>
+	<select id="selectToBeProcessed" resultType="org.cqipc.edu.bean.T_user">
+		select * from t_user where user_id=#{user_id}
+	</select>
+<!--  待处理确认后添加到死部	-->
+	<delete id="deleteProcessed">
+		delete  from t_user where user_id=#{user_id}
+	</delete>
 </mapper>

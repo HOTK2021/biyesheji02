@@ -4,16 +4,17 @@ layui.config({
 }).extend({
     "address" : "address"
 })
+
 layui.use(['form','layer','upload','laydate',"address"],function(){
     form = layui.form;
     $ = layui.jquery;
     $(function () {
-        alert("!!!!!!");
         addLifeTime();
+        $("#21").text("xxxx");
     });
     function addLifeTime() {
         for(var i=0;i<=130;i++){
-            $("#lifetime").append("<option value='"+i+"'>"+i+"</option>");
+            $("#modifylifetime").append("<option value='"+i+"'>"+i+"</option>");
         }
     };
     var layer = parent.layer === undefined ? layui.layer : top.layer,
@@ -59,25 +60,24 @@ layui.use(['form','layer','upload','laydate',"address"],function(){
     address.provinces();
 
     //提交个人资料
-    form.on("submit(addUser)",function(){
+    form.on("submit(proved)",function(){
         // var index = layer.msg('提交中，请稍候',{icon: 16,time:false,shade:0.8});
         //将填写的用户信息存到session以便下次调取
         $.ajax({
             type:"post",
             dataType:"json",
-            data:$("#addUser").serialize(),
-            url: "/addUser",
+            data:$("#trial").serialize(),
+            url: "/notTrial",
             success:function (data) {
                 if (data==1){
-                    layer.msg("添加成功！");
-                    location.href="addUser.html";
+                    layer.msg("修改成功！");
                 }else{
-                    layer.msg("添加失败！");
+                    layer.msg("修改失败！");
                 }
             }
         });
         return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
     });
 
-   form.render("select");
+    form.render("select");
 });

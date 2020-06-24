@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人资料-- 冥府后台管理系统 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+<form class="layui-form layui-row" id="trial">
+    <div class="layui-col-xs12">
+        <div class="layui-form-item layui-bg-cyan">
+            <h2>基本信息</h2>
+            <label class="layui-form-label-col">姓名:<i id="dieName"></i></label>
+            <label class="layui-form-label-col">ID:<i  id="dieId"></i></label>
+            <label class="layui-form-label-col">死因:<i id="dieCause"></i></label>
+            <label class="layui-form-label-col">死亡时间:<i id="dieTime"></i></label>
+        </div>
+        <!--    处理方式    -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">处理方式</label>
+            <div class="layui-input-block">
+                <select name="types" lay-verify="required">
+                    <option value="">请选择处理方式</option>
+                    <option value="0">轮回</option>
+                    <option value="1">打入地狱</option>
+                </select>
+            </div>
+        </div>
+<!--        <div class="layui-form-item">-->
+<!--            <label class="layui-form-label">ID:<i id="dieId">21</i></label>-->
+<!--        </div>-->
+<!--        <div class="layui-form-item">-->
+<!--            <label>死因:<i id="dieCause">寿终正寝</i></label>-->
+<!--        </div>-->
+<!--        <div class="layui-form-item">-->
+<!--            <label class="layui-form-label">死亡时间:<i id="dieTime">2018-1-29 12:30:21</i></label>-->
+<!--        </div>-->
+        <hr class="layui-bg-red">
+        <div class="layui-form-item">
+            <label class="layui-form-label">审判描述</label>
+            <div class="layui-input-block">
+                <textarea id="modifydescription" name="info" placeholder="请输入审判结果" class="layui-textarea myself"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="proved">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="trial.js"></script>
+<script type="text/javascript" src="../../js/cacheUserInfo.js"></script>
+</body>
+</html>

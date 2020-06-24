@@ -9,7 +9,7 @@
 		{
 			"title": "生簿",
 			"icon": "&#xe6af;",
-			"href": "",
+			"href": "page/user/allUser.html",
 			"spread": false
 		},
 		{
@@ -19,24 +19,38 @@
 			"spread": false
 		},
 		{
-			"title": "查询所有人员",
+			"title": "查询生死簿",
 			"icon": "&#xe613;",
-			"href": "page/user/allUser.html",
+			"href": "page/user/selectUserAll.html",
 			"spread": false
 		}
 	],
 	"contentManagement": [
 		{
-			"title": "文章列表",
+			"title": "待处理",
 			"icon": "icon-text",
-			"href": "page/news/newsList.html",
+			"href": "page/userpage/toBeProcessed.html",
 			"spread": false
 		},
 		{
-			"title": "图片管理",
-			"icon": "&#xe634;",
-			"href": "page/img/images.html",
-			"spread": false
+			"title": "审判",
+			"icon": "",
+			"href": "",
+			"spread": false,
+			"children": [
+				{
+					"title": "待审判",
+					"icon": "&#xe6af;",
+					"href": "page/userpage/notPproved.html",
+					"spread":false
+				},
+				{
+					"title": "已审判",
+					"icon": "&#xe69c;",
+					"href": "html/page/userpage/trial.html",
+					"spread":false
+				}
+			]
 		},
 		{
 			"title": "其他页面",

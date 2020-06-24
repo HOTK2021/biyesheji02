@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cqipc.edu.dao.T_user_sDao">
+<!--  查询死表中还未审判的人员  -->
+	<select id="selectNotpproved" resultType="org.cqipc.edu.bean.T_user_s">
+		select * from  t_user_s s,t_mingjie_trial t where s.user_id=t.userId and t.type=1
+	</select>
+	<update id="dieTime">
+		update t_user_s set create_time=#{create_time}
+	</update>
+</mapper>

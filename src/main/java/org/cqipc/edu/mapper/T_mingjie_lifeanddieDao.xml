@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cqipc.edu.dao.T_mingjie_lifeanddieDao">
+	<insert id="addTMLAD">
+		insert into t_mingjie_lifeanddie values (null,#{userId},#{createTime},#{age},#{totalAge},#{overAge},#{statu});
+	</insert>
+	<select id="selectOver" resultType="org.cqipc.edu.bean.T_mingjie_lifeanddie">
+		select * from t_mingjie_lifeanddie
+	</select>
+	<select id="selectLifeAndDieCount" resultType="int">
+		select count(*) from t_mingjie_lifeanddie
+	</select>
+	<!--  修改生命周期表里的状态值	-->
+	<update id="modifyPS">
+		update t_mingjie_lifeanddie set statu=2	where userId=#{userId}
+	</update>
+</mapper>

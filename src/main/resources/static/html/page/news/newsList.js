@@ -131,8 +131,8 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
                 // $.get("删除文章接口",{
                 //     newsId : data.newsId  //将需要删除的newsId作为参数传入
                 // },function(data){
-                    tableIns.reload();
-                    layer.close(index);
+                tableIns.reload();
+                layer.close(index);
                 // })
             });
         } else if(layEvent === 'look'){ //预览

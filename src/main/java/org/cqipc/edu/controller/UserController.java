@@ -3,23 +3,21 @@ package org.cqipc.edu.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.cqipc.edu.bean.T_mingjie_lifeanddie;
+import org.cqipc.edu.bean.T_mingjie_trial;
 import org.cqipc.edu.bean.T_user;
+import org.cqipc.edu.bean.T_user_s;
+import org.cqipc.edu.dao.T_mingjie_trialDao;
 import org.cqipc.edu.service.T_userService;
 import org.cqipc.edu.util.MD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigInteger;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 @Controller
@@ -68,21 +66,42 @@ public class UserController {
 		System.out.println(param);
 		return param;
 	}
-
+//查询生表用户
 	@RequestMapping("/userAll")
 	@ResponseBody
-	public Map<String,Object> userAll(){
-		System.out.println("进入工作空间");
-		List<T_user> list=ts.selectUserAll();
-		System.out.println(list);
+	public Map<String,Object> userAll(@RequestParam(value = "page",required = false,
+			defaultValue ="1")int page,@RequestParam(value = "limit",required = false,
+			defaultValue ="10")int limit,@RequestParam(value = "keyWord",required = false,
+	defaultValue = "")String keyWord,@RequestParam(value = "user_id",required = false,
+			defaultValue = "0")int user_id){
+		int count=0;
+		count=ts.selectUserCount();
+		List<T_user> list=ts.selectUserAll(page,limit,keyWord,user_id);
 		Map<String,Object> map=new HashMap<String, Object>();
 		map.put("code", 0);
 		map.put("msg", "");
+		map.put("count",count);
 		map.put("data", list);
-		System.out.println(map);
+		System.out.println("结束生表查询");
 		return map;
 	}
-
+//查询死表用户
+	@RequestMapping("/userDieAll")
+	@ResponseBody
+	public Map<String,Object> userDieAll(@RequestParam(value = "page",required = false,
+			defaultValue ="1")int page,@RequestParam(value = "limit",required = false,defaultValue = "10")int limit){
+		int count;
+		count=ts.selectUserDieCount();
+		List<T_user> list=ts.selectUserDieAll(page,limit);
+		Map<String,Object> map=new HashMap<String, Object>();
+		map.put("code", 0);
+		map.put("msg", "");
+		map.put("count", count);
+		map.put("data", list);
+		System.out.println("结束死表查询！");
+		return map;
+	}
+//添加用户
 	@RequestMapping("/addUser")
 	@ResponseBody
 	public int addUser(T_user atu){
@@ -93,10 +112,12 @@ public class UserController {
 //		atu.setCreate_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 		atu.setModify_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 		atu.setLast_login_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-		System.out.println(atu);
 		String date=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 //		T_user cs=new T_user("xiaogui",MD5.getMd5("123456"), BigInteger.valueOf(5),"111@qq.com","145623987",1,date,date,date,"男","大鬼好惹，小鬼难缠","jZUIxmJycoymBprLOUbT.png",120);
-		if(ts.addUser(atu)==1){
+		int yes=ts.addUser(atu);
+		int ok=ts.addTMLAD(new T_mingjie_lifeanddie(null,atu.getUser_id(),new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()),0,atu.getAge(),atu.getAge(),1));
+		System.out.println(atu.getUser_id());
+		if(yes==1&&ok==1){
 			System.out.println("成功");
 			return 1;
 		}else {
@@ -104,5 +125,66 @@ public class UserController {
 			return 0;
 		}
 
+	}
+//修改生表用户信息
+	@RequestMapping("/modifyUser")
+	@ResponseBody
+	public int modifyUser(T_user atu){
+		System.out.println(atu);
+		return ts.modifyUserInfo(atu.getUsername(),atu.getDescription(),atu.getAge(),atu.getUser_id());
+	}
+//查询待审批
+	@RequestMapping("/selectToBeProcessed")
+	@ResponseBody
+	public Map<String,Object> selectToBeProcessed(){
+		List<T_mingjie_lifeanddie> list=ts.selectOver();
+		List<T_user> list1=new ArrayList();
+		for(T_mingjie_lifeanddie t:list){
+			BigInteger id=t.getUserId();
+			list1.add(ts.selectToBeProcessed(id));
+		}
+		Map<String,Object> map=new HashMap<String,Object>();
+		map.put("code",0);
+		map.put("msg","");
+		map.put("count",ts.selectUserDieCount());
+		map.put("data",list1);
+		System.out.println(list1);
+		return map;
+	}
+
+//待处理
+	@RequestMapping("/process")
+	@ResponseBody
+	public int process(@RequestParam("user_id")int user_id){
+		String date=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+		if (ts.deleteProcessed(user_id)==1&&ts.modifyPS(user_id)==1){
+			ts.dieTime(date);
+			ts.addTMTD(user_id);
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+
+	//待审判
+	@RequestMapping("/notpproved")
+	@ResponseBody
+	public Map<String,Object> notpproved(){
+		List<T_user_s> list=ts.selectNotpproved();
+		Map<String,Object> map=new HashMap<String,Object>();
+		map.put("code",0);
+		map.put("msg","");
+		map.put("count",ts.selectUserDieCount());
+		map.put("data",list);
+		System.out.println(ts.selectNotpproved());
+		return map;
+	}
+	//审判处理过程
+	@RequestMapping("/notTrial")
+	@ResponseBody
+	public int notTrial(T_mingjie_trial tmtd){
+		ts.notTrial(tmtd.getInfo());
+		System.out.println(tmtd.getInfo());
+		return 1;
 	}
 }

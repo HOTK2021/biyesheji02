@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cqipc.edu.dao.T_mingjie_trialDao">
+	<insert id="addTMTD">
+		insert into t_mingjie_trial values (null,#{userId},null,null,null,1,1)
+	</insert>
+	<update id="notTrial">
+		update t_mingjie_trial set info=#{info}
+	</update>
+</mapper>
