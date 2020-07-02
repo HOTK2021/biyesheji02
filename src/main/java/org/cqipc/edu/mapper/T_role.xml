@@ -3,7 +3,29 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.cqipc.edu.dao.T_roleDao">
-	<select id="findRoleByRid" resultType="T_role">
+	<select id="findRoleByRid" resultType="org.cqipc.edu.bean.T_role">
 		select * from t_role where role_id=#{roleId}
+	</select>
+	<select id="findRole" resultType="org.cqipc.edu.bean.T_role">
+		select * from t_role
+	</select>
+	<update id="addgongzhi">
+		update t_user set status=#{status} where user_id=#{user_id}
+	</update>
+	<insert id="addUserRole">
+		insert into t_user_role values (#{user_id},#{role_id})
+	</insert>
+	<select id="selectnotGZ" resultType="org.cqipc.edu.bean.T_user">
+		select * from t_user where status=0;
+	</select>
+
+	<select id="selectUserRole" resultType="org.cqipc.edu.bean.T_u_r">
+		select u.user_id as "user_id",u.username as "username",r.role_name as "role_name"
+		from t_user u,t_user_role tr,t_role r where u.user_id=tr.user_id and tr.role_id=r.role_id
+		limit #{pageCount},#{pageSize}
+	</select>
+	<select id="selectUserRoleCount" resultType="int">
+		select count(*) from t_user where user_id=any(select u.user_id as "user_id"
+		from t_user u,t_user_role tr,t_role r where u.user_id=tr.user_id and tr.role_id=r.role_id)
 	</select>
 </mapper>

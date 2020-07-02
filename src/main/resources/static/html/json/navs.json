@@ -132,9 +132,17 @@
 			"spread": false
 		},
 		{
+			"id": 1021,
+			"title": "冥币管理",
+			"icon": "icon-vip",
+			"href": "page/userpage/money.html",
+			"spread": false
+		},
+		{
+			"id": 1022,
 			"title": "权限管理",
 			"icon": "icon-vip",
-			"href": "page/userpage/wenYiJiLu1.html",
+			"href": "page/userpage/quanxain.html",
 			"spread": false
 		}
 	],

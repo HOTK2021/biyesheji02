@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>货币和消费</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all"/>
+</head>
+<body>
+<!-- 页面导航 -->
+<ul class="layui-nav layui-bg-green">
+    <li class="layui-nav-item  layui-this" pc>
+        <a href="javascript:;" onclick=""><i class="seraph icon-icon10" data-icon="icon-icon10"></i><cite>货币和消费</cite></a>
+    </li>
+</ul>
+
+<div  class="layui-card-body" >
+    <table id="money" class="layui-hide" layui-filter=""></table>
+</div>
+
+
+<script type="text/javascript" src="../../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="money.js"></script>
+<script type="text/javascript" src="../../js/cacheUserInfo.js"></script>
+</body>
+
+<div  id="chongzhiDiv" style="display: none">
+    <form class="layui-form" id="chongzhi" style="margin-top: 20px">
+        <div class="layui-form-item">
+            <label class="layui-form-label">金额</label>
+            <div class="layui-input-block" style="width: 220px;">
+                <input type="text" id="total" name="total" required  lay-verify="required|num" placeholder="请输入充值金额" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">概述</label>
+            <div class="layui-input-block" style="width: 220px">
+                <textarea id="info" name="info" placeholder="请输入内容" class="layui-textarea" style="resize: none"></textarea>
+            </div>
+        </div>
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="chongzhiBtn">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </form>
+</div>
+
+<div id="xiaofeDiv" style="display: none">
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">金额</label>
+            <div class="layui-input-block" style="width: 220px;">
+                <input type="text" id="total2" name="total" required  lay-verify="required|num" placeholder="请输入消费金额" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text" >
+            <label class="layui-form-label">概述</label>
+            <div class="layui-input-block" style="width: 220px">
+                <textarea name="info" id="info2" placeholder="请输入内容" class="layui-textarea" style="resize: none"></textarea>
+            </div>
+        </div>
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="xiaofeiBtn">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </form>
+</div>
+
+<div id="xiangqingDiv" style="display: none">
+    <table id="xiangqingTable"></table>
+</div>
+</html>

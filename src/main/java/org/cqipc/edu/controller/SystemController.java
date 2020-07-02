@@ -201,4 +201,129 @@ public class SystemController {
         return map;
     }
 
+    //冥币
+    @SystemControllerLog(description = "select")
+    @RequestMapping("/selectHad")
+    @ResponseBody
+    public Map<String,Object>selectHad(@RequestParam(required = false,value = "page",defaultValue = "1")int page,
+                                       @RequestParam(required = false,defaultValue = "10",value = "limit")int limit){
+        List<T_mingjie_had> list=ss.selectHad(page, limit);
+        int count=ss.selectHadCount();
+        Map<String,Object> map=new HashMap<String, Object>();
+        map.put("code",0);
+        map.put("msg","");
+        map.put("data",list);
+        map.put("count",count);
+        return map;
+    }
+
+    @SystemControllerLog(description = "冥币")
+    @RequestMapping("/modifyTotal")
+    @ResponseBody
+    public int modifyTotal(@RequestParam("userId")int userId,
+                           @RequestParam("total")int total,
+                           @RequestParam("status")int status,
+                           @RequestParam("info")String info){
+
+        T_mingjie_hadescurrency t_mingjie_hadescurrency=ss.selectHadByid(userId);
+        double oldtotal=t_mingjie_hadescurrency.getTotal();
+        double newtotal=0;
+        if (status==1){
+            newtotal=total+oldtotal;
+        }else {
+            newtotal=oldtotal-total;
+        }
+        t_mingjie_hadescurrency.setTotal(newtotal);
+        int count=ss.modifyTotal(t_mingjie_hadescurrency);
+        T_mingjie_hadescurrency_log t_mingjie_hadescurrency_log=new T_mingjie_hadescurrency_log();
+        t_mingjie_hadescurrency_log.setUserId(BigInteger.valueOf(userId));
+        t_mingjie_hadescurrency_log.setInfo(info);
+        String date=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
+        t_mingjie_hadescurrency_log.setCreateTime(date);
+        t_mingjie_hadescurrency_log.setStatus(status);
+
+        int count2=ss.addHadLog(t_mingjie_hadescurrency_log);
+        if(count!=0&&count2!=0){
+            return 0;
+        }else {
+            return 1;
+        }
+    }
+
+    @SystemControllerLog(description = "select")
+    @RequestMapping("/selectLog")
+    @ResponseBody
+    public Map<String,Object>selectLog(@RequestParam(required = false,value = "page",defaultValue = "1")int page,
+                                       @RequestParam(required = false,defaultValue = "10",value = "limit")int limit){
+        List<T_mingjie_hadescurrency_log> list=ss.selectLog(page, limit);
+        int count=ss.selectLogCount();
+        Map<String,Object> map=new HashMap<String, Object>();
+        map.put("code",0);
+        map.put("msg","");
+        map.put("data",list);
+        map.put("count",count);
+        return map;
+    }
+
+//-----------------------------------------------------------------------------------------
+@SystemControllerLog(description = "select")
+@RequestMapping("/findRole")
+@ResponseBody
+public List<T_role> findRole(){
+    return ss.findRole();
+}
+    @SystemControllerLog(description = "添加公职人员")
+    @RequestMapping("/addgongzhi")
+    @ResponseBody
+    public int addgongzhi(@RequestParam("userId")int userId,
+                          @RequestParam("role_id")int role_id){
+        T_user t_user=new T_user();
+        t_user.setUser_id(BigInteger.valueOf(userId));
+        t_user.setStatus(1);
+        int count=ss.addgongzhi(t_user);
+        T_user_role t_user_role=new T_user_role(BigInteger.valueOf(userId),BigInteger.valueOf(role_id));
+        int count2=ss.addUserRole(t_user_role);
+        if(count!=0&&count2!=0){
+            return 0;
+        }else {
+            return 1;
+        }
+    }
+    @SystemControllerLog(description = "select")
+    @RequestMapping("/selectnotGZ")
+    @ResponseBody
+    public List<T_user> selectnotGZ(){
+        return ss.selectnotGZ();
+    }
+
+    @SystemControllerLog(description = "select")
+    @RequestMapping("/selectUserRole")
+    @ResponseBody
+    public Map<String,Object> selectUserRole(@RequestParam(required = false,value = "page",defaultValue = "1")int page,
+                                             @RequestParam(required = false,defaultValue = "10",value = "limit")int limit){
+        List<T_u_r> list=ss.selectUserRole(page, limit);
+        int count=ss.selectUserRoleCount();
+        Map<String,Object> map=new HashMap<String, Object>();
+        map.put("code",0);
+        map.put("msg","");
+        map.put("data",list);
+        map.put("count",count);
+        return map;
+    }
+
+    @SystemControllerLog(description = "修改用户角色")
+    @RequestMapping("/updateRole")
+    @ResponseBody
+    public int updateRole( @RequestParam("userId")int userId,
+                           @RequestParam("role_id")int role_id){
+        T_user_role t_user_role=new T_user_role();
+        t_user_role.setUser_id(BigInteger.valueOf(userId));
+        t_user_role.setRole_id(BigInteger.valueOf(role_id));
+        int count=ss.updateRole(t_user_role);
+        if(count!=0){
+            return 0;
+        }else {
+            return 1;
+        }
+    }
 }

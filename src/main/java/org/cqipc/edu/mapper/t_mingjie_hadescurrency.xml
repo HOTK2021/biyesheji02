@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cqipc.edu.dao.T_mingjie_hadescurrencyDao">
+    <select id="selectHad" resultType="org.cqipc.edu.bean.T_mingjie_had">
+        select h.id as"id" ,h.userId as "userId" ,u.username as"username",h.total as"total"
+        from t_user u,t_mingjie_hadescurrency h where h.userId=u.user_id limit #{pageCount},#{pageSize}
+    </select>
+    <select id="selectHadByid" resultType="org.cqipc.edu.bean.T_mingjie_hadescurrency">
+        select * from t_mingjie_hadescurrency where userId=#{userId}
+    </select>
+
+    <select id="selectHadCount" resultType="int">
+        select count(*) from t_mingjie_hadescurrency
+    </select>
+    <insert id="addHadLog" >
+        insert into t_mingjie_hadescurrency_log values (null,#{userId},#{info},#{createTime},#{status})
+    </insert>
+    <update id="modifyTotal">
+        update t_mingjie_hadescurrency set total=#{total} where userId=#{userId}
+    </update>
+    <select id="selectLog" resultType="org.cqipc.edu.bean.T_mingjie_hadescurrency_log">
+        select * from t_mingjie_hadescurrency_log limit #{pageCount},#{pageSize}
+    </select>
+    <select id="selectLogCount" resultType="int">
+        select count(*) from t_mingjie_hadescurrency_log
+    </select>
+</mapper>

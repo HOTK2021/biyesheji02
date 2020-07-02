@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权限管理</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all"/>
+</head>
+<body>
+<ul class="layui-nav layui-bg-green">
+    <li class="layui-nav-item  layui-this" pc>
+        <a href="javascript:;" onclick=""><i class="seraph icon-icon10" data-icon="icon-icon10"></i><cite>权限设置</cite></a>
+    </li>
+</ul>
+
+<div  class="layui-card-body" >
+    <table id="quanxian" class="layui-hide" layui-filter=""></table>
+</div>
+
+<div id="addRole" style="display: none">
+    <form class="layui-form" id="addRoleForm" style="margin-top: 20px">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户</label>
+            <div class="layui-input-block" style="width: 220px">
+                <select id="userId" name="userId" lay-verify="required">
+                    <option value="">请选择用户</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色</label>
+            <div class="layui-input-block" style="width: 220px">
+                <select id="role_id" name="role_id" lay-verify="required">
+                    <option value="">请选择角色</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="bianjiDiv" style="display: none">
+    <form class="layui-form" style="margin-top: 20px">
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色</label>
+            <div class="layui-input-block" style="width: 220px">
+                <select id="role_id2" name="role_id" lay-verify="required">
+                    <option value="">请选择角色</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="bianjiBtn">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </form>
+</div>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-sm" lay-event="" onclick="addRole()">新增</a>
+</script>
+
+<script type="text/javascript" src="../../../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="quanxain.js"></script>
+<script type="text/javascript" src="../../js/cacheUserInfo.js"></script>
+</body>
+</html>
