@@ -36,11 +36,10 @@ function selectUserInfo(url){
             elem: '#notPproved'
             ,height: 'auto'
             ,url: url //数据接口
-            ,page: true //开启分页
-            ,limits : [10,15,20,25]
-            ,limit :10
+            // ,page: true //开启分页
+            // ,limits : [10,15,20,25]
+            // ,limit :100
             ,cols : [[
-                {type: "checkbox", fixed:"left", width:50},
                 {field: 'user_id', title: '用户ID', minWidth:100, align:"center"},
                 {field: 'username', title: '用户名', minWidth:200, align:'center'},
                 {field: 'description', title: '死因', minWidth:200, align:'center'},
@@ -61,12 +60,13 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
 //添加文章
     function addNews(edit){
         var index = layui.layer.open({
-            title : "修改",
+            title : "添加审判信息",
             type : 2,
             content : "/html/page/userpage/trial.html",
             success : function(layero, index){
                 var body = layui.layer.getChildFrame('body', index);
                 if(edit){
+                    body.find("#userId").val(edit.user_id);
                     body.find("#dieName").text(edit.username);
                     body.find("#dieId").text(edit.user_id);
                     body.find("#dieCause").text(edit.description);

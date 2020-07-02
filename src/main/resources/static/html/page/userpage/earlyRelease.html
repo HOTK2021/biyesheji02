@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>提前释放</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+<form class="layui-form layui-row" id="earlyRelease">
+    <!--    受刑时间    -->
+    <div class="layui-form-item">
+        <input type="hidden" name="imprisonmentTime" id="earlyTime" value="">
+        <input type="hidden" name="userId" id="userId4" value="">
+        <label class="layui-form-label">提前时间</label>
+        <div class="layui-input-block layui-col-md3 layui-col-xs12">
+            <select id="earlyImprisonmentTime" lay-verify="required">
+                <option value="">请选择时间</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+            <label class="layui-form-label">执行描述</label>
+            <div class="layui-input-block layui-col-md6 layui-col-xs12" >
+                <textarea name="info" placeholder="请输入审判结果" class="layui-textarea myself" style="height: 300px"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="early">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="earlyRelease.js"></script>
+<script type="text/javascript" src="../../js/cacheUserInfo.js"></script>
+</body>
+</html>

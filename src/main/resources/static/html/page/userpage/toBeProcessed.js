@@ -12,9 +12,9 @@ function searProcess() {
         var $=layui.$,layer=layui.layer;
         var key=$("#keyWord").val();
         if(/^[0-9]+$/.test(key)){
-            selectUserInfo("/userAll?user_id="+key);
+            selectUserInfo("/selectToBeProcessed?user_id="+key);
         }else {
-            selectUserInfo("/userAll?keyWord="+key);
+            selectUserInfo("/selectToBeProcessed?keyWord="+key);
         }
 
     })
@@ -37,11 +37,10 @@ function selectUserInfo(url){
             type:"post"
             ,height: 'auto'
             ,url: url //数据接口
-            ,page: true //开启分页
-            ,limits : [10,15,20,25]
-            ,limit :10
+            // ,page: true //开启分页
+            // ,limits : [10,15,20,25]
+            // ,limit :10
             ,cols : [[
-                {type: "checkbox", fixed:"left", width:50},
                 {field: 'user_id', title: 'ID', minWidth:100, align:"center"},
                 {field: 'username', title: '姓名', minWidth:200, align:'center'},
                 {field: 'description', title: '死因', minWidth:200, align:'center'},

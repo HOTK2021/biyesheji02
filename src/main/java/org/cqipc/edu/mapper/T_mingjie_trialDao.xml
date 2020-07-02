@@ -7,6 +7,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into t_mingjie_trial values (null,#{userId},null,null,null,1,1)
 	</insert>
 	<update id="notTrial">
-		update t_mingjie_trial set info=#{info}
+		update t_mingjie_trial set info=#{info},trialTime=#{trialTime},type=0,types=#{types} where userId=#{userId}
+	</update>
+	<select id="selectTried" resultType="org.cqipc.edu.bean.T_mingjie_trial">
+		select * from  t_user_s s,t_mingjie_trial t where s.user_id=t.userId and t.type=0
+	</select>
+	<select id="waitingToAllocateHell" resultType="org.cqipc.edu.bean.T_mingjie_trial">
+		select * from  t_user_s s,t_mingjie_trial t where s.user_id=t.userId and t.type=0 and t.types=1
+	</select>
+	<update id="hellAssigned">
+		update t_mingjie_trial set types=2 where userId=#{userId}
 	</update>
 </mapper>

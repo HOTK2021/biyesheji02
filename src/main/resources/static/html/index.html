@@ -7,7 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="favicon.ico">
-	<link rel="stylesheet" href="layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../html/layui/css/layui.css" media="all"/>
+	<link rel="stylesheet" href="/layui/css/layui.css">
+<!--	<link rel="stylesheet" href="layui/css/layui.css" media="all" />-->
 	<link rel="stylesheet" href="css/index.css" media="all" />
 </head>
 <body class="main_body">
@@ -31,13 +33,16 @@
 					</li>
 				</ul>
 				<ul class="layui-nav topLevelMenus" pc>
-					<li class="layui-nav-item layui-this" data-menu="personnelManagement">
+					<li class="layui-nav-item layui-this menu" data-menu="personnelManagement"
+					style="pointer-events: none" value="1001" id="1001" pc>
 						<a href="javascript:;"><i class="seraph icon-icon10" data-icon="icon-icon10"></i><cite>人员信息管理</cite></a>
 					</li>
-					<li class="layui-nav-item layui-this" data-menu="contentManagement">
+					<li class="layui-nav-item layui-this menu" data-menu="contentManagement"
+						style="pointer-events: none" value="1002" id="1002" pc>
 						<a href="javascript:;"><i class="layui-icon" data-icon="&#xe63c;">&#xe63c;</i><cite>业务管理</cite></a>
 					</li>
-					<li class="layui-nav-item" data-menu="memberCenter" pc>
+					<li class="layui-nav-item  layui-this menu" data-menu="memberCenter"
+						style="pointer-events: none" value="1003" id="1003" pc>
 						<a href="javascript:;"><i class="seraph icon-icon10" data-icon="icon-icon10"></i><cite>用户中心</cite></a>
 					</li>
 					<li class="layui-nav-item" data-menu="systemeSttings" pc>
@@ -62,7 +67,7 @@
 							<dd><a href="javascript:;" data-url="page/user/changePwd.html"><i class="seraph icon-xiugai" data-icon="icon-xiugai"></i><cite>修改密码</cite></a></dd>
 							<dd><a href="javascript:;" class="showNotice"><i class="layui-icon">&#xe645;</i><cite>系统公告</cite><span class="layui-badge-dot"></span></a></dd>
 							<dd pc><a href="javascript:;" class="functionSetting"><i class="layui-icon">&#xe620;</i><cite>功能设定</cite><span class="layui-badge-dot"></span></a></dd>
-							<dd pc><a href="javascript:;" class="changeSkin"><i class="layui-icon">&#xe61b;</i><cite>更换皮肤</cite></a></dd>
+							<dd pc><a href="javascript:;" onclick="changeColor()"><i class="layui-icon">&#xe61b;</i><cite>更换皮肤</cite></a></dd>
 							<dd><a href="page/login/login.html" class="signOut"><i class="seraph icon-tuichu"></i><cite>退出</cite></a></dd>
 						</dl>
 					</li>
@@ -73,7 +78,7 @@
 		<div class="layui-side layui-bg-black">
 			<div class="user-photo">
 				<a class="img" title="我的头像" ><img src="../images/0.jpg" class="userAvatar"></a>
-				<p>你好！<span class="userName">阎总</span>, 欢迎登录</p>
+				<p>你好！<span class="userName"></span>, 欢迎登录</p>
 			</div>
 			<!-- 搜索 -->
 			<div class="layui-form component">
@@ -124,9 +129,22 @@
 	<!-- 移动导航 -->
 	<div class="site-tree-mobile"><i class="layui-icon">&#xe602;</i></div>
 	<div class="site-mobile-shade"></div>
-
-	<script type="text/javascript" src="layui/layui.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="../layui/layui.js"></script>
+	<script type="text/javascript" src="../html/js/index.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 	<script type="text/javascript" src="js/cache.js"></script>
+	<div id="changeColor" style="display: none">
+		<form class="layui-form" style="margin-top: 40px;margin-left: 90px">
+			<div class="layui-form-item" style="display: flex;">
+				<div class="layui-input-inline" style="width: 150px;">
+					<input type="text" value="" placeholder="请选择颜色" class="layui-input" id="colorText" readonly="readonly">
+				</div>
+				<div class="layui-input-inline" id="colorSelector">
+					<div id="color"></div>
+				</div>
+			</div>
+		</form>
+	</div>
 </body>
 </html>

@@ -32,6 +32,14 @@ public class T_userServiceImpl implements T_userService {
 	T_mingjie_lifeanddieDao tmlad;
 	@Autowired
 	T_mingjie_trialDao tmtd;
+	@Autowired
+	T_mingjie_soulDao tms;
+	@Autowired
+	T_mingjie_eighteenDao tme;
+	@Autowired
+	T_mingjie_eighteen_logDao tmel;
+	@Autowired
+	T_plagueDao tpd;
 	@Override
 	//用户登录的方法
 	public Object[] Login(String username, String password) {
@@ -61,9 +69,9 @@ public class T_userServiceImpl implements T_userService {
 		}
 
 	@Override
-	public List<T_user> selectUserAll(int pageCount,int pageSize,String keyWord,int user_id) {
+	public List<T_user> selectUserAll1(int pageCount,int pageSize,String keyWord,int user_id) {
 		int p=(pageCount-1)*pageSize;
-		return tu.selectUserAll(p,pageSize,keyWord,user_id);
+		return tu.selectUserAll1(p,pageSize,keyWord,user_id);
 	}
 
 	@Override
@@ -107,7 +115,6 @@ public class T_userServiceImpl implements T_userService {
 		for (int i=0;i<count;i++){
 			pro= (T_mingjie_lifeanddie) list.get(i);
 			if (pro.getAge()==pro.getTotalAge()&&pro.getOverAge()==0&&pro.getStatu()==1){
-				System.out.println(pro);
 				list1.add(pro);
 			}
 		}
@@ -153,8 +160,117 @@ public class T_userServiceImpl implements T_userService {
 	}
 
 	@Override
-	public int notTrial(String info) {
-		return tmtd.notTrial(info);
+	public int notTrial(String info,String trialTime,int types,BigInteger userId) {
+		return tmtd.notTrial(info,trialTime,types,userId);
 	}
+
+
+	//两个方法，查询已审判的用户和审判记录
+	@Override
+	public T_user_s selectDieUserTried(int user_id) {
+		return tus.selectDieUserTried(user_id);
+	}
+
+	@Override
+	public List<T_mingjie_trial> selectTried() {
+		return tmtd.selectTried();
+	}
+
+	@Override
+	public int inserWaitSoul(BigInteger userId, String executorInfo, String executorTime, int executorStatus) {
+		return tms.inserWaitSoul(userId,executorInfo,executorTime,executorStatus);
+	}
+
+	@Override
+	public List<T_mingjie_soul> selectSoulDispensed() {
+		return tms.selectSoulDispensed();
+	}
+
+	@Override
+	public int distributeMPS(String executorTime, int userId) {
+		return tms.distributeMPS(executorTime, userId);
+	}
+
+	@Override
+	public List<T_mingjie_soul> selectunallocatedMPS() {
+		return tms.selectunallocatedMPS();
+	}
+
+	@Override
+	public int withdrawMPS(String executorTime, int userId) {
+		return tms.withdrawMPS(executorTime, userId);
+	}
+
+	@Override
+	public List<T_mingjie_eighteen> selectMingJieEighteen() {
+		return tme.selectMingJieEighteen();
+	}
+
+	@Override
+	public List<T_mingjie_trial> waitingToAllocateHell() {
+		return tmtd.waitingToAllocateHell();
+	}
+
+	@Override
+	public List<T_mingjie_eighteen_log> selectTortured() {
+		return tmel.selectTortured();
+	}
+
+	@Override
+	public int modifyLog(String info, int imprisonmentTime,BigInteger userId) {
+		return tmel.modifyLog(info, imprisonmentTime,userId);
+	}
+
+	@Override
+	public List<T_mingjie_eighteen_log> selectHellRecord() {
+		return tmel.selectHellRecord();
+	}
+
+	@Override
+	public int addToAllocateHellResult(T_mingjie_eighteen_log t_mingjie_eighteen_log) {
+		System.out.println(t_mingjie_eighteen_log+"!!!!");
+		return tmel.addToAllocateHellResult(t_mingjie_eighteen_log);
+	}
+
+	@Override
+	public int hellAssigned(BigInteger userId) {
+		return tmtd.hellAssigned(userId);
+	}
+
+	@Override
+	public int modifyearlyLog(String info, int imprisonmentTime, BigInteger userId) {
+		return tmel.modifyearlyLog(info, imprisonmentTime,userId);
+	}
+
+	@Override
+	public int freed(int userId) {
+		return tmel.freed(userId);
+	}
+
+//	@Override
+//	public List<T_plague> findPlagueAll() {
+//		return tpd.findPlagueAll();
+//	}
+//新增
+	@Override
+	public int addToUser_c(List<T_user> list) {
+		return tu.addToUser_c(list);
+	}
+
+	@Override
+	public int removeUser(List<BigInteger> list) {
+		return tu.removeUser(list);
+	}
+
+	@Override
+	public int addIntoTrial(List<T_mingjie_trial> list) {
+		return tu.addIntoTrial(list);
+	}
+	@Override
+	public List<T_user> selectUserAll(int user_id, String username,int pageCount,int pageSize) {
+		int p=(pageCount-1)*pageSize;
+		return tu.selectUserAll( user_id,  username,p,pageSize);
+	}
+
 }
 

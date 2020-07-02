@@ -12,17 +12,19 @@
 <body class="childrenBody">
 <form class="layui-form layui-row" id="trial">
     <div class="layui-col-xs12">
-        <div class="layui-form-item layui-bg-cyan">
-            <h2>基本信息</h2>
-            <label class="layui-form-label-col">姓名:<i id="dieName"></i></label>
-            <label class="layui-form-label-col">ID:<i  id="dieId"></i></label>
-            <label class="layui-form-label-col">死因:<i id="dieCause"></i></label>
-            <label class="layui-form-label-col">死亡时间:<i id="dieTime"></i></label>
+        <div class="layui-form-item">
+            <h1>基本信息</h1>
+            <label class="layui-form-label-col"><h3>姓名:<i id="dieName"></i></h3></label>
+            <label class="layui-form-label-col"><h3>ID:<i  id="dieId"></i></h3></label>
+            <label class="layui-form-label-col"><h3>死因:<i id="dieCause"></i></h3></label>
+            <label class="layui-form-label-col"><h3>死亡时间:<i id="dieTime"></i></h3></label>
         </div>
+        <hr class="layui-bg-red">
         <!--    处理方式    -->
         <div class="layui-form-item">
-            <label class="layui-form-label">处理方式</label>
-            <div class="layui-input-block">
+            <label class="layui-form-label">处理方式:</label>
+            <input type="hidden" name="userId" id="userId" value="">
+            <div class="layui-input-block layui-col-md3 layui-col-xs12">
                 <select name="types" lay-verify="required">
                     <option value="">请选择处理方式</option>
                     <option value="0">轮回</option>
@@ -30,20 +32,10 @@
                 </select>
             </div>
         </div>
-<!--        <div class="layui-form-item">-->
-<!--            <label class="layui-form-label">ID:<i id="dieId">21</i></label>-->
-<!--        </div>-->
-<!--        <div class="layui-form-item">-->
-<!--            <label>死因:<i id="dieCause">寿终正寝</i></label>-->
-<!--        </div>-->
-<!--        <div class="layui-form-item">-->
-<!--            <label class="layui-form-label">死亡时间:<i id="dieTime">2018-1-29 12:30:21</i></label>-->
-<!--        </div>-->
-        <hr class="layui-bg-red">
         <div class="layui-form-item">
             <label class="layui-form-label">审判描述</label>
-            <div class="layui-input-block">
-                <textarea id="modifydescription" name="info" placeholder="请输入审判结果" class="layui-textarea myself"></textarea>
+            <div class="layui-input-block layui-col-md6 layui-col-xs12" >
+                <textarea id="modifydescription" name="info" placeholder="请输入审判结果" class="layui-textarea myself" style="height: 300px"></textarea>
             </div>
         </div>
         <div class="layui-form-item">

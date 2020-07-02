@@ -10,4 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="dieTime">
 		update t_user_s set create_time=#{create_time}
 	</update>
+	<select id="selectDieUserTried" resultType="org.cqipc.edu.bean.T_user_s">
+		select username from  t_user_s where user_id=#{user_id}
+	</select>
 </mapper>

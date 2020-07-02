@@ -8,6 +8,27 @@ public class T_plague_info {
 	private String area_id;
 	private String happen_time;
 	private String info;
+	//新增
+	private int die_count;
+	private BigInteger user_id;
+
+	public int getDie_count() {
+		return die_count;
+	}
+
+	public void setDie_count(int die_count) {
+		this.die_count = die_count;
+	}
+
+	public BigInteger getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(BigInteger user_id) {
+		this.user_id = user_id;
+	}
+
+
 	public BigInteger getPlague_info_id() {
 		return plague_info_id;
 	}
@@ -38,24 +59,38 @@ public class T_plague_info {
 	public void setInfo(String info) {
 		this.info = info;
 	}
-	public T_plague_info(BigInteger plague_info_id, BigInteger plague_id, String area_id, String happen_time, String info) {
+	public T_plague_info(BigInteger plague_info_id, BigInteger plague_id, String area_id, String happen_time, int die_count, String info,BigInteger user_id) {
 		this.plague_info_id = plague_info_id;
 		this.plague_id = plague_id;
 		this.area_id = area_id;
 		this.happen_time = happen_time;
+		this.die_count = die_count;
 		this.info = info;
+		this.user_id=user_id;
 	}
-	public T_plague_info(BigInteger plague_id, String area_id, String happen_time, String info) {
+
+	public T_plague_info(BigInteger plague_id, String area_id, String happen_time, int die_count, String info,BigInteger user_id) {
 		this.plague_id = plague_id;
 		this.area_id = area_id;
 		this.happen_time = happen_time;
+		this.die_count = die_count;
 		this.info = info;
+		this.user_id=user_id;
 	}
+
 	public T_plague_info() {
 	}
+
 	@Override
 	public String toString() {
-		return "T_plague_info [plague_info_id=" + plague_info_id + ", plague_id=" + plague_id + ", area_id=" + area_id
-				+ ", happen_time=" + happen_time + ", info=" + info + "]";
+		return "T_plague_info{" +
+				"plague_info_id=" + plague_info_id +
+				", plague_id=" + plague_id +
+				", area_id='" + area_id + '\'' +
+				", happen_time='" + happen_time + '\'' +
+				", die_count=" + die_count +
+				", info='" + info + '\'' +
+				", user_id=" + user_id +
+				'}';
 	}
 }

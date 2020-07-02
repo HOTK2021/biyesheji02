@@ -9,6 +9,16 @@ public class T_mingjie_eighteen_log {
 	private String inOrOutTime;
 	private int status;
 	private String info;
+	private int imprisonmentTime;
+
+	public int getImprisonmentTime() {
+		return imprisonmentTime;
+	}
+
+	public void setImprisonmentTime(int imprisonmentTime) {
+		this.imprisonmentTime = imprisonmentTime;
+	}
+
 	public BigInteger getId() {
 		return id;
 	}
@@ -45,13 +55,14 @@ public class T_mingjie_eighteen_log {
 	public void setInfo(String info) {
 		this.info = info;
 	}
-	public T_mingjie_eighteen_log(BigInteger id, BigInteger userId, BigInteger eighteenId, String inOrOutTime, int status, String info) {
+	public T_mingjie_eighteen_log(BigInteger id, BigInteger userId, BigInteger eighteenId, String inOrOutTime, int status, String info,int imprisonmentTime) {
 		this.id = id;
 		this.userId = userId;
 		this.eighteenId = eighteenId;
 		this.inOrOutTime = inOrOutTime;
 		this.status = status;
 		this.info = info;
+		this.imprisonmentTime=imprisonmentTime;
 	}
 	public T_mingjie_eighteen_log(BigInteger userId, BigInteger eighteenId, String inOrOutTime, int status, String info) {
 		this.userId = userId;
@@ -59,12 +70,21 @@ public class T_mingjie_eighteen_log {
 		this.inOrOutTime = inOrOutTime;
 		this.status = status;
 		this.info = info;
+		this.imprisonmentTime=imprisonmentTime;
 	}
 	public T_mingjie_eighteen_log() {
 	}
+
 	@Override
 	public String toString() {
-		return "T_mingjie_eighteen_log [id=" + id + ", userId=" + userId + ", eighteenId=" + eighteenId
-				+ ", inOrOutTime=" + inOrOutTime + ", status=" + status + ", info=" + info + "]";
+		return "T_mingjie_eighteen_log{" +
+				"id=" + id +
+				", userId=" + userId +
+				", eighteenId=" + eighteenId +
+				", inOrOutTime='" + inOrOutTime + '\'' +
+				", status=" + status +
+				", info='" + info + '\'' +
+				", imprisonmentTime=" + imprisonmentTime +
+				'}';
 	}
 }

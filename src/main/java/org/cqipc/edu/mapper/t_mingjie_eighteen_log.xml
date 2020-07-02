@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cqipc.edu.dao.T_mingjie_eighteen_logDao">
+    <select id="selectTortured" resultType="org.cqipc.edu.bean.T_mingjie_eighteen_log">
+        select * from t_mingjie_eighteen_log where status=1
+    </select>
+    <update id="modifyLog">
+        update t_mingjie_eighteen_log set info=#{info},imprisonmentTime=#{imprisonmentTime} where userId=#{userId}
+    </update>
+    <update id="modifyearlyLog">
+        update t_mingjie_eighteen_log set info=#{info},imprisonmentTime=#{imprisonmentTime} where userId=#{userId}
+    </update>
+    <select id="selectHellRecord" resultType="org.cqipc.edu.bean.T_mingjie_eighteen_log">
+        select * from t_mingjie_eighteen_log
+    </select>
+    <insert id="addToAllocateHellResult">
+        insert into t_mingjie_eighteen_log values(null,#{userId},#{eighteenId},#{inOrOutTime},#{status},#{info},#{imprisonmentTime})
+    </insert>
+    <update id="freed">
+        update t_mingjie_eighteen_log set status=2 where userId=#{userId}
+    </update>
+</mapper>

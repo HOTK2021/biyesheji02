@@ -8,7 +8,6 @@ layui.use(['form','layer','upload','laydate',"address"],function(){
     form = layui.form;
     $ = layui.jquery;
     $(function () {
-        alert("!!!!!!");
         addLifeTime();
     });
     function addLifeTime() {

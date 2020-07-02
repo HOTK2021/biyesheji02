@@ -40,7 +40,6 @@ function selectUserInfo(url){
             ,limits : [10,15,20,25]
             ,limit :10
             ,cols : [[
-                {type: "checkbox", fixed:"left", width:50},
                 {field: 'user_id', title: '用户ID', minWidth:100, align:"center"},
                 {field: 'username', title: '用户名', minWidth:200, align:'center'},
                 {field: 'dept_id', title: '部门ID', minWidth:200, align:'center'},

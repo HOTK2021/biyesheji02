@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--修改生簿信息-->
+    <meta charset="UTF-8">
+    <title>用户中心--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+
+<form class="layui-form layui-row" style="margin-left: 300px">
+    <!--<div class="layui-col-md3 layui-col-xs12 user_right" >
+        <div class="layui-upload-list">
+            <img class="layui-upload-img layui-circle userFaceBtn userAvatar" id="userFace">
+        </div>
+        <button type="button" class="layui-btn layui-btn-primary userFaceBtn"><i class="layui-icon">&#xe67c;</i> 掐指一算，我要换一个头像了</button>
+        <p>由于是纯静态页面，所以只能显示一张随机的图片</p>
+    </div>-->
+    <div class="layui-col-md6 layui-col-xs12">
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">瘟疫源</label>
+            <div class="layui-input-block">
+                <input type="text"  id="username" name="username"  lay-verify="required" class="layui-input realName" disabled="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">瘟疫种类</label>
+            <div class="layui-input-block">
+                <select name="plagueId" id="plagueId" lay-verify="required">
+                    <option value="">请选择瘟疫种类</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+            </div>
+        </div>
+        <input type="hidden" name="user_id" id="user_id">
+        <div class="layui-form-item">
+            <label class="layui-form-label">死亡人数</label>
+            <div class="layui-input-block">
+                <input type="text"  id="diecont" name="diecont" placeholder="请输入死亡人数" lay-verify="required" class="layui-input realName" >
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn layui-btn-danger" lay-submit="" lay-filter="addUser">发起瘟疫</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+<script type="text/javascript" src="../../layui/layui.js"></script>
+<script type="text/javascript" src="plague_start.js"></script>
+<script type="text/javascript" src="../../js/cacheUserInfo.js"></script>
+<script type="text/javascript" src="../../../js/jquery-1.9.1.js" ></script>
+</body>
+</html>

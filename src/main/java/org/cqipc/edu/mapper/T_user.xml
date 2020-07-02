@@ -7,8 +7,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="userLogin" resultType="org.cqipc.edu.bean.T_user">
 		select * from t_user where username=#{username} and password=#{password}
 	</select>
-<!--  查询所有在生簿中的用户	-->
 	<select id="selectUserAll" resultType="org.cqipc.edu.bean.T_user">
+		select * from t_user
+		<if test="user_id!=0">
+			<where>
+				and user_id=#{user_id}
+			</where>
+		</if>
+		<if test='username!="" and username!=null'>
+			<where>
+				and username like concat('%',#{username},'%')
+			</where>
+		</if>
+		limit #{pageCount},#{pageSize}
+	</select>
+<!--  查询所有在生簿中的用户	-->
+	<select id="selectUserAll1" resultType="org.cqipc.edu.bean.T_user">
 		select * from t_user
 		<if test="keyWord!='' and keyWord!=null">
 			<where>
@@ -50,4 +64,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<delete id="deleteProcessed">
 		delete  from t_user where user_id=#{user_id}
 	</delete>
+<!--  全部新增  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	-->
+	<insert id="addToUser_c">
+		insert into t_user_s values
+		<foreach collection="list" item="u" separator=",">
+			(#{u.user_id},#{u.username},#{u.password},#{u.dept_id},#{u.email},#{u.mobile},#{u.status},
+			#{u.create_time},#{u.modify_time},#{u.last_login_time},#{u.ssex},#{u.description},#{u.avatar},#{u.age})
+		</foreach>
+	</insert>
+	<!--从生簿中删除用户-->
+	<delete id="removeUser">
+		delete from t_user where user_id in
+		<foreach collection="list" item="item" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</delete>
+	<!--加入死簿的同时向审判表中添加一条数据用于审判-->
+	<insert id="addIntoTrial">
+		insert into t_mingjie_trial values
+		<foreach collection="list" item="t" separator=",">
+			(null,#{t.userId},#{t.trialUserId},#{t.trialTime},#{t.info},#{t.type},#{t.types})
+		</foreach>
+	</insert>
 </mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cqipc.edu.dao.T_mingjie_soulDao">
+	<select id="selectSoulDispensed" resultType="org.cqipc.edu.bean.T_mingjie_soul">
+		select * from t_mingjie_soul where executorStatus=0
+	</select>
+	<select id="selectunallocatedMPS" resultType="org.cqipc.edu.bean.T_mingjie_soul">
+		select * from t_mingjie_soul where executorStatus=1
+	</select>
+	<insert id="inserWaitSoul">
+		insert into t_mingjie_soul values (null,#{userId},3,#{executorInfo},#{executorTime},#{executorStatus})
+	</insert>
+	<update id="distributeMPS">
+		update t_mingjie_soul set executorId=2,executorInfo="轮回，已分配孟婆汤",executorTime=#{executorTime},executorStatus=1 where userId=#{userId}
+	</update>
+	<update id="withdrawMPS">
+		update t_mingjie_soul set executorId=2,executorInfo="撤回了已分配的孟婆汤",executorTime=#{executorTime},executorStatus=0 where userId=#{userId}
+	</update>
+
+</mapper>
