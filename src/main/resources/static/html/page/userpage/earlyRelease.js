@@ -47,7 +47,7 @@ layui.use(['form','layer','upload','laydate',"address"],function(){
             url: "/earlyRelease?addImprisonmentTime="+addImprisonmentTime,
             success:function (data) {
                 if(data==2){
-                    layer.msg("提前释放年数大于受刑年数，请重试！");
+                    layer.msg("退回费用大于初始费用，请重试！");
                 }
                 else if (data==1){
                     layer.msg("修改成功！");

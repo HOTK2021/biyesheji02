@@ -2,14 +2,14 @@
 	"personnelManagement": [
 		{
 			"id":1004,
-			"title": "新增人员",
+			"title": "新增入职员工",
 			"icon": "&#xe654;",
 			"href": "page/user/addUser.html",
 			"spread": false
 		},
 		{
 			"id":1005,
-			"title": "查询生死簿",
+			"title": "查询员工信息",
 			"icon": "&#xe613;",
 			"href": "page/user/selectUserAll.html",
 			"spread": false
@@ -18,28 +18,28 @@
 	"contentManagement": [
 		{
 			"id":1006,
-			"title": "待处理",
+			"title": "住院待处理",
 			"icon": "icon-text",
 			"href": "page/userpage/toBeProcessed.html",
 			"spread": false
 		},
 		{
 			"id":1007,
-			"title": "审判",
+			"title": "住院部待分配",
 			"icon": "",
 			"href": "",
 			"spread": false,
 			"children": [
 				{
 					"id":1008,
-					"title": "待审判",
+					"title": "待分配",
 					"icon": "&#xe6af;",
 					"href": "page/userpage/notPproved.html",
 					"spread":false
 				},
 				{
 					"id":1009,
-					"title": "已审判",
+					"title": "已分配",
 					"icon": "&#xe69c;",
 					"href": "page/userpage/tried.html",
 					"spread":false
@@ -48,21 +48,21 @@
 		},
 		{
 			"id":1010,
-			"title": "孟婆管理",
+			"title": "药剂管理",
 			"icon": "&#xe630;",
 			"href": "",
 			"spread": false,
 			"children": [
 				{
 					"id":1011,
-					"title": "未分配孟婆汤",
+					"title": "未分药剂",
 					"icon": "&#xe61c;",
 					"href": "page/userpage/unallocatedMPS.html",
 					"spread": false
 				},
 				{
 					"id":1012,
-					"title": "已分配孟婆汤",
+					"title": "已分配药剂",
 					"icon": "&#xe609;",
 					"href": "page/userpage/MPSDispensed.html",
 					"spread": false
@@ -71,28 +71,28 @@
 		},
 		{
 			"id":1013,
-			"title": "地狱",
+			"title": "门诊",
 			"icon": "&#xe630;",
 			"href": "",
 			"spread": false,
 			"children": [
 				{
 					"id":1014,
-					"title": "等待分配地狱",
+					"title": "等待门诊",
 					"icon": "&#xe61c;",
 					"href": "page/userpage/waitingToAllocateHell.html",
 					"spread": false
 				},
 				{
 					"id":1015,
-					"title": "受刑中",
+					"title": "诊断中",
 					"icon": "&#xe609;",
 					"href": "page/userpage/Tortured.html",
 					"spread": false
 				},
 				{
 					"id":1016,
-					"title": "地狱记录",
+					"title": "诊断记录",
 					"icon": "&#xe609;",
 					"href": "page/userpage/hellRecord.html",
 					"spread": false

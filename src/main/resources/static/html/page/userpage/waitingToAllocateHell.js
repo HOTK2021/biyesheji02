@@ -42,14 +42,14 @@ function selectUserInfo(url){
             ,cols : [[
                 {field: 'id', title: 'ID', minWidth:100, align:"center"},
                 {field: 'userId', title: '用户ID', minWidth:200, align:'center'},
-                {field: 'types', title: '审判结果', minWidth:200, align:'center',templet: function (d) {
+                {field: 'types', title: '诊断结果', minWidth:200, align:'center',templet: function (d) {
                             if (d.types==1){
-                                return "打入地狱";
+                                return "回家调养";
                             }else {
-                                return "轮回";
+                                return "住院";
                             }
                     }},
-                {field: 'trialTime', title: '死亡时间', minWidth:200, align:'center'},
+                {field: 'trialTime', title: '诊断时间', minWidth:200, align:'center'},
                 {title: '操作', width:170, templet:'#waitingToAllocateHellListBar',align:"center"}
             ]]
         });
@@ -66,7 +66,7 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
 //添加文章
     function addNews(edit){
         var index = layui.layer.open({
-            title : "添加审判信息",
+            title : "添加诊断信息",
             type : 2,
             content : "/html/page/userpage/ToAllocateHell.html",
             success : function(layero, index){

@@ -42,8 +42,8 @@ function selectUserInfo(url){
             ,cols : [[
                 {field: 'user_id', title: '用户ID', minWidth:100, align:"center"},
                 {field: 'username', title: '用户名', minWidth:200, align:'center'},
-                {field: 'description', title: '死因', minWidth:200, align:'center'},
-                {field: 'create_time', title: '死亡时间', minWidth:200, align:'center'},
+                {field: 'description', title: '病因', minWidth:200, align:'center'},
+                {field: 'create_time', title: '诊断时间', minWidth:200, align:'center'},
                 {title: '操作', width:170, templet:'#notPprovedListBar',align:"center"}
             ]]
         });
@@ -60,7 +60,7 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
 //添加文章
     function addNews(edit){
         var index = layui.layer.open({
-            title : "添加审判信息",
+            title : "添加分配信息",
             type : 2,
             content : "/html/page/userpage/trial.html",
             success : function(layero, index){

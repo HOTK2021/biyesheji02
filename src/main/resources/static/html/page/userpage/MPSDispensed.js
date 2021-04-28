@@ -40,21 +40,21 @@ function selectUserInfo(url){
             // ,limits : [10,15,20,25]
             // ,limit :10
             ,cols : [[
-                {field: 'userId', title: '用户ID', minWidth:100, align:"center"},
+                {field: 'userId', title: '护工工号', minWidth:100, align:"center"},
                 {field: 'executorId', title: '执行人', minWidth:200, align:'center',templet:function (d) {
                         if(d.executorId==2){
-                            return "孟婆";
+                            return "护士长";
                         }else {
-                            return "判官";
+                            return "主治医师";
                         }
                     }},
                 {field: 'executorInfo', title: '执行描述', minWidth:200, align:'center'},
                 {field: 'executorTime', title: '执行时间', minWidth:200, align:'center'},
                 {field: 'executorStatus', title: '执行状态', minWidth:200, align:'center',templet:function (d) {
                         if(d.executorStatus==0){
-                            return "等待分配孟婆汤";
+                            return "等待分配药剂";
                         }else {
-                            return "已分配孟婆汤";
+                            return "已分配药剂";
                         }
                     }},
                 {title: '操作', width:170, templet:'#MPSDispensedListBar',align:"center"}

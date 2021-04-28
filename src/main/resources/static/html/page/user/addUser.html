@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>个人资料-- 冥府后台管理系统 2.0</title>
+    <title>个人资料-- 医院后台管理系统 2.0</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,7 @@
 <form class="layui-form layui-row" id="addUser">
     <div class="layui-col-md3 layui-col-xs12 user_right">
         <div class="layui-upload-list">
-            <img class="layui-upload-img layui-circle userFaceBtn userAvatar" id="userFace">
+            <img src="../../../images/1.jpg">
         </div>
         <button type="button" class="layui-btn layui-btn-primary userFaceBtn"><i class="layui-icon">&#xe67c;</i> 掐指一算，我要换一个头像了</button>
         <p>由于是纯静态页面，所以只能显示一张随机的图片</p>
@@ -38,12 +38,17 @@
             <div class="layui-input-block">
                 <select name="dept_id" lay-verify="required">
                     <option value="">请选择部门</option>
-                    <option value="1">开发部</option>
-                    <option value="2">开发一部</option>
-                    <option value="3">开发二部</option>
-                    <option value="4">市场部</option>
-                    <option value="5">人事部</option>
-                    <option value="6">测试部</option>
+                    <option value="1">诊疗部门</option>
+                    <option value="2">护理部门</option>
+                    <option value="3">检查中心部门</option>
+                    <option value="4">药剂部门</option>
+                    <option value="5">营养部门</option>
+                    <option value="6">病史资料部门</option>
+                    <option value="7">事务部门</option>
+                    <option value="8">社会医疗部门</option>
+                    <option value="9">社会服务部门</option>
+                    <option value="10">环境整备部门</option>
+
                 </select>
             </div>
         </div>
@@ -80,16 +85,16 @@
         </div>
 <!--    寿命    -->
         <div class="layui-form-item">
-            <label class="layui-form-label">寿命</label>
+            <label class="layui-form-label">实习期限</label>
             <div class="layui-input-block">
                 <select id="lifetime" name="age" lay-verify="required">
-                    <option value="">请选择寿命</option>
+                    <option value="">请选择实习期现</option>
                 </select>
             </div>
         </div>
 <!--    描述    -->
         <div class="layui-form-item">
-            <label class="layui-form-label">自我评价</label>
+            <label class="layui-form-label">简介</label>
             <div class="layui-input-block">
                 <textarea name="description" placeholder="请输入内容" class="layui-textarea myself"></textarea>
             </div>

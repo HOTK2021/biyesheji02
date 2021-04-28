@@ -43,8 +43,9 @@ function selectUserInfo(url){
             ,cols : [[
                 {field: 'user_id', title: 'ID', minWidth:100, align:"center"},
                 {field: 'username', title: '姓名', minWidth:200, align:'center'},
-                {field: 'description', title: '死因', minWidth:200, align:'center'},
-                {field: 'create_time', title: '死亡时间', minWidth:200, align:'center'},
+                {field: 'description', title: '病因', minWidth:200, align:'center'},
+                {field: 'create_time', title: '诊断时间', minWidth:200, align:'center'},
+                {field: 'username', title: '诊断医生', minWidth:200, align:'center'},
                 {title: '操作', width:170, templet:'#UserListBar',align:"center"}
             ]]
         });

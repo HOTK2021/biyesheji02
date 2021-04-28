@@ -43,51 +43,51 @@ function selectUserInfo(url){
                 {field: 'userId', title: '用户ID', minWidth:30, align:"center"},
                 {field: 'eighteenId', title: '受刑地狱', minWidth:150, align:'center',templet: function (d) {
                         if (d.eighteenId==1){
-                            return "第一层：拔舌地狱";
+                            return " 皮肤科";
                         }else if (d.eighteenId==2){
-                            return "第二层：剪刀地狱";
+                            return " 眼科";
                         }else if (d.eighteenId==3){
-                            return "第三层：铁树地狱";
+                            return " 儿科";
                         }else if (d.eighteenId==4){
-                            return "第四层：孽镜地狱";
+                            return " 口腔科";
                         }else if (d.eighteenId==5){
-                            return "第五层：蒸笼地狱";
+                            return " 肿瘤科";
                         }else if (d.eighteenId==6){
-                            return "第六层：铜柱地狱";
+                            return " 疼痛科";
                         }else if (d.eighteenId==7){
-                            return "第七层：刀山地狱";
+                            return " 耳鼻咽喉科";
                         }else if (d.eighteenId==8){
-                            return "第八层：冰山地狱";
+                            return " 生殖医学科";
                         }else if (d.eighteenId==9){
-                            return "第九层：油锅地狱";
+                            return " 胸外科";
                         }else if (d.eighteenId==10){
-                            return "第十层：牛坑地狱";
+                            return " 泌尿科";
                         }else if (d.eighteenId==11){
-                            return "第十一层：石压地狱";
+                            return " 骨科";
                         }else if (d.eighteenId==12){
-                            return "第十二层：舂臼地狱";
+                            return " 肝胆胰外科";
                         }else if (d.eighteenId==13){
-                            return "第十三层：血池地狱";
+                            return " 妇科";
                         }else if (d.eighteenId==14){
-                            return "第十四层：枉死地狱";
+                            return " 产科";
                         }else if (d.eighteenId==15){
-                            return "第十五层：磔刑地狱";
+                            return " 神经外科";
                         }else if (d.eighteenId==16){
-                            return "第十六层：火山地狱";
+                            return " 皮肤科";
                         }else if (d.eighteenId==17){
-                            return "第十七层：石磨地狱";
+                            return " 康复医学科";
                         }else if (d.eighteenId==18){
-                            return "第十八层：刀锯地狱";
+                            return " 心血管内科";
                         }
                     }},
-                {field: 'inOrOutTime', title: '入狱时间', minWidth:150, align:'center'},
+                {field: 'inOrOutTime', title: '诊断时间', minWidth:150, align:'center'},
                 {field: 'status', title: '执行状态', minWidth:200, align:'center',templet:function (d) {
                         if(d.status==1){
-                            return "受刑中";
+                            return "诊断中";
                         }
                     }},
                 {field: 'info', title: '执行描述', minWidth:200, align:'center'},
-                {field: 'imprisonmentTime', title: '受刑年数', minWidth:200, align:'center'},
+                {field: 'imprisonmentTime', title: '诊断费用', minWidth:200, align:'center'},
                 {title: '操作', width:300, templet:'#TorturedListBar',align:"center"}
             ]]
         });
@@ -104,7 +104,7 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
     //添加文章
     function addNews(delayedRelease){
         var index = layui.layer.open({
-            title : "添加审判信息",
+            title : "添加诊断信息",
             type : 2,
             content : "/html/page/userpage/delayedRelease.html",
             success : function(layero, index){
@@ -130,7 +130,7 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
     }
     function early(earlyedit){
         var index = layui.layer.open({
-            title : "提前释放",
+            title : "普通id",
             type : 2,
             content : "/html/page/userpage/earlyRelease.html",
             success : function(layero, index){
@@ -187,10 +187,10 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
                 url: "/freed",
                 success:function (data) {
                     if(data==1){
-                        layer.msg("已释放！");
+                        layer.msg("已分配！");
                         selectUserInfo("/selectTortured");
                     }else {
-                        layer.msg("释放失败！");
+                        layer.msg("分配失败！");
                         selectUserInfo("/selectTortured");
                     }
 

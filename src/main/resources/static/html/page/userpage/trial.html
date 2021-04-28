@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>个人资料-- 冥府后台管理系统 2.0</title>
+    <title>个人资料-- 医院后台管理系统 2.0</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,8 +16,8 @@
             <h1>基本信息</h1>
             <label class="layui-form-label-col"><h3>姓名:<i id="dieName"></i></h3></label>
             <label class="layui-form-label-col"><h3>ID:<i  id="dieId"></i></h3></label>
-            <label class="layui-form-label-col"><h3>死因:<i id="dieCause"></i></h3></label>
-            <label class="layui-form-label-col"><h3>死亡时间:<i id="dieTime"></i></h3></label>
+            <label class="layui-form-label-col"><h3>病因:<i id="dieCause"></i></h3></label>
+            <label class="layui-form-label-col"><h3>诊断时间:<i id="dieTime"></i></h3></label>
         </div>
         <hr class="layui-bg-red">
         <!--    处理方式    -->
@@ -27,15 +27,16 @@
             <div class="layui-input-block layui-col-md3 layui-col-xs12">
                 <select name="types" lay-verify="required">
                     <option value="">请选择处理方式</option>
-                    <option value="0">轮回</option>
-                    <option value="1">打入地狱</option>
+                    <option value="0">骨科住院部</option>
+                    <option value="1">内科住院部</option>
+                    <option value="2">外科住院部</option>
                 </select>
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">审判描述</label>
+            <label class="layui-form-label">诊断描述</label>
             <div class="layui-input-block layui-col-md6 layui-col-xs12" >
-                <textarea id="modifydescription" name="info" placeholder="请输入审判结果" class="layui-textarea myself" style="height: 300px"></textarea>
+                <textarea id="modifydescription" name="info" placeholder="请输入诊断结果" class="layui-textarea myself" style="height: 300px"></textarea>
             </div>
         </div>
         <div class="layui-form-item">
