@@ -45,5 +45,5 @@ public interface SystemService {
     public int selectUserRoleCount();
 
 //    public T_user_role findRoleByUid(BigInteger userID);
-    public int updateRole(T_user_role t_user_role);
-}
+    public int updateRole(T_user_role t_user_role);}
+
