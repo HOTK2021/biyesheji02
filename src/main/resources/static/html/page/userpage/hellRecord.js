@@ -79,6 +79,7 @@ function selectUserInfo(url){
                         }else if (d.eighteenId==18){
                             return " 心血管内科";
                         }
+
                     }},
                 {field: 'inOrOutTime', title: '诊断时间', minWidth:200, align:'center'},
                 {field: 'status', title: '执行状态', minWidth:200, align:'center',templet:function (d) {
