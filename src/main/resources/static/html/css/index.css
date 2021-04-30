@@ -50,15 +50,15 @@ iframe{ position:absolute; height:100%; width:100%; border:none;}
 /*椤堕儴*/
 .header{ z-index:2000;}
 .logo{ color: #fff; float: left; line-height:60px; font-size:20px; padding:0 25px; text-align: center; width:150px;}
-.hideMenu{ float:left; width:20px; height:20px; margin-top:15px; font-size:17px; line-height:20px; text-align:center; padding:5px 5px; color:#fff; background-color:#1AA094; }
+.hideMenu{ float:left; width:20px; height:20px; margin-top:15px; font-size:17px; line-height:20px; text-align:center; padding:5px 5px; color:#fff; background-color: #8986b6; }
 .hideMenu:hover{ color:#fff; }
 .layui-nav cite{ margin-left: 5px;}
 /*椤堕儴鍙充晶*/
 .topLevelMenus{float:left;}
-.topLevelMenus li.layui-nav-item:hover{ background-color:rgba(221,221,221,0.2);}
+.topLevelMenus li.layui-nav-item:hover{ background-color: rgba(0, 44, 255, 0.2);}
 .layui-nav .layui-this:after{ bottom:-5px!important;}
 .header .layui-nav-bar{top:60px !important;}
-.topLevelMenus .layui-nav-item.layui-this{ background-color:rgba(0,0,0,0.5);}
+.topLevelMenus .layui-nav-item.layui-this{ background-color: rgba(0, 236, 242, 0.5);}
 .top_menu.layui-nav .layui-this:after{ width:0px; }
 .top_menu .layui-nav-bar,.mobileTopLevelMenus .layui-nav-bar{background-color:rgba(0,0,0,0.7);}
 
@@ -91,7 +91,7 @@ iframe{ position:absolute; height:100%; width:100%; border:none;}
 .layui-body{overflow:hidden; border-top:5px solid #1AA094;border-left:2px solid #1AA094; background:#fff;}
 #top_tabs_box{ padding-right:138px; height:40px; border-bottom:1px solid #e2e2e2; }
 #top_tabs{ position: absolute; border-bottom:none;}
-.layui-tab-title .layui-this{ background-color:#1AA094; color:#fff; }
+.layui-tab-title .layui-this{ background-color: #6977a0; color:#fff; }
 .layui-tab-title .layui-this:after{ border:none; }
 .layui-tab-title li cite{ font-style: normal; padding-left:5px; }
 .clildFrame.layui-tab-content{ top:41px; position:absolute; bottom:0; width:100%; padding:0;}

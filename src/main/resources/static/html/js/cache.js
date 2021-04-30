@@ -22,29 +22,29 @@ layui.use(['form','jquery',"layer"],function() {
         $("#userFace").attr("src","../../../images/0.jpg");
     }
 
-    //公告层
-    function showNotice(){
-        layer.open({
-            type: 1,
-            title: "系统公告",
-            area: '300px',
-            shade: 0.8,
-            id: 'LAY_layuipro',
-            btn: ['火速围观'],
-            moveType: 1,
-            content: '<div style="padding:15px 20px; text-align:justify; line-height: 22px; text-indent:2em;border-bottom:1px solid #e2e2e2;"><p class="layui-red">这是来自冥界地府的系统公告</p></pclass></p><p>1.0发布以后发现很多朋友无法登记死簿导致无法投胎：<span class="layui-red">此版本已进行产品升级，不管以何种形式登录或录入，请勿进行非本人操作，否则将追究相应的责任。</span></p></div>',
-            success: function(layero){
-                var btn = layero.find('.layui-layer-btn');
-                btn.css('text-align', 'center');
-                btn.on("click",function(){
-                    tipsShow();
-                });
-            },
-            cancel: function(index, layero){
-                tipsShow();
-            }
-        });
-    }
+    // //公告层
+    // function showNotice(){
+    //     layer.open({
+    //         type: 1,
+    //         title: "系统公告",
+    //         area: '300px',
+    //         shade: 0.8,
+    //         id: 'LAY_layuipro',
+    //         btn: ['火速围观'],
+    //         moveType: 1,
+    //         content: '<div style="padding:15px 20px; text-align:justify; line-height: 22px; text-indent:2em;border-bottom:1px solid #e2e2e2;"><p class="layui-red">这是来自冥界地府的系统公告</p></pclass></p><p>1.0发布以后发现很多朋友无法登记死簿导致无法投胎：<span class="layui-red">此版本已进行产品升级，不管以何种形式登录或录入，请勿进行非本人操作，否则将追究相应的责任。</span></p></div>',
+    //         success: function(layero){
+    //             var btn = layero.find('.layui-layer-btn');
+    //             btn.css('text-align', 'center');
+    //             btn.on("click",function(){
+    //                 tipsShow();
+    //             });
+    //         },
+    //         cancel: function(index, layero){
+    //             tipsShow();
+    //         }
+    //     });
+    // }
     function tipsShow(){
         window.sessionStorage.setItem("showNotice","true");
         if($(window).width() > 432){  //如果页面宽度不足以显示顶部“系统公告”按钮，则不提示
@@ -65,7 +65,7 @@ layui.use(['form','jquery',"layer"],function() {
             type : 1,
             content : '<div class="admin-header-lock" id="lock-box">'+
                             '<div class="admin-header-lock-img"><img src="../images/0.jpg" class="userAvatar"/></div>'+
-                            '<div class="admin-header-lock-name" id="lockUserName">阎总</div>'+
+                            '<div class="admin-header-lock-name" id="lockUserName">用户</div>'+
                             '<div class="input_btn">'+
                                 '<input type="password" class="admin-header-lock-input layui-input" autocomplete="off" placeholder="请输入密码解锁.." name="lockPwd" id="lockPwd" />'+
                                 '<button class="layui-btn" id="unlock">解锁</button>'+
@@ -216,7 +216,7 @@ function changeColor() {
         //开启全功能
         colorpicker.render({
             elem: '#color'
-            ,color: '#ff0000'
+            ,color: '#00ced1'
             ,format: 'hex'
             ,predefine: true
             ,done: function(color){

@@ -102,29 +102,6 @@
 	],
 	"memberCenter": [
 		{
-			"id":1017,
-			"title": "瘟疫管理",
-			"icon": "&#xe612;",
-			"href": "",
-			"spread": false,
-			"children": [
-				{
-					"id":1018,
-					"title": "发布瘟疫",
-					"icon": "&#xe609;",
-					"href": "page/userpage/wenyi.html",
-					"spread": false
-				},
-				{
-					"id":1019,
-					"title": "瘟疫记录",
-					"icon": "&#xe609;",
-					"href": "page/userpage/wenYiJiLu.html",
-					"spread": false
-				}
-			]
-		},
-		{
 			"id":1020,
 			"title": "日志管理",
 			"icon": "icon-vip",
@@ -133,7 +110,7 @@
 		},
 		{
 			"id": 1021,
-			"title": "冥币管理",
+			"title": "余额管理",
 			"icon": "icon-vip",
 			"href": "page/userpage/money.html",
 			"spread": false
